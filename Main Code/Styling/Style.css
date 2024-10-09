@@ -1,0 +1,30 @@
+/* NAV BAR */
+
+nav #nav_logo {
+    background-color: #afceee;
+    height: 65px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    background-color: #d7e7f6;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #4c5d6d;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul a:hover{
+    background-color: #afceee;
+    border-radius: 5px;
+    color: black;
+}
