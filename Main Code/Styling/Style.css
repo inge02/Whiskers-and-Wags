@@ -28,3 +28,11 @@ nav ul a:hover{
     border-radius: 5px;
     color: black;
 }
+
+#nav_first_li{
+    margin-left: 5%;
+}
+
+#nav_last_li{
+    margin-right: 5%;
+}
