@@ -103,3 +103,115 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* ---------- Footer--------------- */
+
+.Logo{
+    width: 250px;
+    height: 130px;
+    border-bottom: 2px solid;
+    margin-bottom: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.admin_row{
+    display: flex;
+    justify-content: center;
+
+}
+
+.Footer{
+    background-color: #afceee;
+    padding: 40px 0;
+    font-family: sans-serif;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-col p{
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer-col h4{
+    font-size: 22px;
+    color: #4c5d6d;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid;
+    
+}
+
+.footer-col ul li a{
+    font-size: 18px;
+    text-transform: capitalize;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    transition: all 0.3s ease;
+    
+}
+
+.footer-col ul li a:hover{
+    margin-left: 8px;
+    font-weight: 600;
+    color: #4c5d6d;   
+}
+
+
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color: #4c5d6d;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #d7e7f6;
+}
+
+
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+}
