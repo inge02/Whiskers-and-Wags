@@ -14,6 +14,7 @@ nav ul{
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+    margin-bottom: 0px;
 }
 
 nav ul a{
@@ -35,4 +36,70 @@ nav ul a:hover{
 
 #nav_last_li{
     margin-right: 5%;
+}
+
+
+/*COMMON ELEMENTS/CLASSES*/
+/* use for large image on beginning of page */
+.hero_img{
+    background-image: url("../Images/placeholder_image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    width: 100%;
+    height: 600px;
+    margin-bottom: 0px;  
+}
+
+/* use for description of page */
+.title_card{
+    background-color: #d7e7f6;
+    text-align: center;
+}
+
+.title_card p{
+    padding: 15px;
+    color: #4c5d6d;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.title_card h1{
+    color: #4c5d6d;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+
+/* use to evenly distribute children */
+.evenly_distribute_children{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* section below description */
+.content{
+    text-align: center;
+}
+
+.content h2{
+    color: #4c5d6d;
+   
+    margin-bottom: 25px;
+}
+
+
+/* GREEN CARDS */
+.icon_sqaure{
+    background-color: green;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    margin: 0px;
+}
+
+.icon_sqaure img{
+    width: 200px;
 }
