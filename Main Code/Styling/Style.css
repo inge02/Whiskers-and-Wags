@@ -103,3 +103,82 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* -----------------Settings--------------- */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.toggle{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle-button{
+ background-color: #d2d2d2;
+ width: 50px;
+ height: 25px;
+ border-radius: 200px;
+ cursor: pointer;
+ position: relative;
+ transition: 0.2s;
+}
+
+.toggle-button::before{
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 200px;
+    margin: 1.7px;
+    transition: 0.2s;
+}
+
+input:checked + .toggle-button{
+    background-color: #afceee;
+}
+
+input:checked + .toggle-button::before{
+    transform: translateX(25px);
+}
+
+input{
+    display: none;
+}
+
+.Button-list{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.Button-list button{
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 5px;
+    border: aliceblue;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #afceee;
+    cursor: pointer;
+}
+
+.Button-list button:hover{
+    background-color: #d7e7f6;
+}
+
+.help-link{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 700;
+}
