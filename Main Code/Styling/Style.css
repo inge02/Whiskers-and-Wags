@@ -91,24 +91,28 @@ nav ul a:hover{
 
 /* GREEN CARDS */
 .icon_sqaure{
-    background-color: green;
+    background-color: #c8f0d5;
     display: inline-block;
     height: 300px;
     width: 300px;
     margin: 20px;
     text-align: center;
     margin: 0px;
+    border-radius: 30px;
+}
+
+.icon_sqaure:hover{
+    cursor: pointer;
 }
 
 .icon_sqaure img{
     width: 200px;
-    padding-top:20px;
-    
+    padding-top:20px;   
 }
 
 .static {
     position: absolute;
-    background: green;
+    background: #c8f0d5;
 }
 
 .static:hover{
