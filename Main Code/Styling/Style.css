@@ -102,4 +102,15 @@ nav ul a:hover{
 
 .icon_sqaure img{
     width: 200px;
+    padding-top:20px;
+    
+}
+
+.static {
+    position: absolute;
+    background: green;
+}
+
+.static:hover{
+    opacity: 0;
 }
