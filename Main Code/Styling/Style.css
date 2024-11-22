@@ -2,8 +2,13 @@
 
 nav #nav_logo {
     background-color: #afceee;
-    height: 65px;
+    height: 100px;
     text-align: center;
+}
+
+nav #nav_logo img{
+    height: 75px;
+    margin-top: 10px;
 }
 
 nav ul{
