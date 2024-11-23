@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="Styling/Style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
 
     <title>Whiskers & Wags Navbar</title>
 </head>
@@ -13,20 +14,26 @@
         <!--Logo Part-->
         <!--todo-->
         <div id="nav_logo">
+            
+            <label for="nav_check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
             <a href="HomePage.html"><img src="Images/whiskers_&_wags_logo.png"></a>
         </div>
 
         <!--Links to Pages Part-->
         <!--todo-->
-            <ul>
-                <li id="nav_first_li"><a href="adoptChoice.html">Adopt</a></li>
-                <li><a href="">Adopt My Pet</a></li>
-                <li><a href="">Donate</a></li>
-                <li><a href="">Events</a></li>
-                <li><a href="">Gallery</a></li>
-                <li id="nav_last_li"><a href="petCare.html">Pet Care</a></li>
-            </ul>
 
+        
+        <input type="checkbox" id="nav_check">
+        <ul>
+            <li id="nav_first_li"><a href="adoptChoice.html">Adopt</a></li>
+            <li><a href="">Adopt My Pet</a></li>
+            <li><a href="">Donate</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Gallery</a></li>
+            <li id="nav_last_li"><a href="petCare.html">Pet Care</a></li>
+        </ul>
     </nav>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
