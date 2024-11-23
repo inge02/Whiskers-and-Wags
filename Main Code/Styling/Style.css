@@ -2,8 +2,13 @@
 
 nav #nav_logo {
     background-color: #afceee;
-    height: 65px;
+    height: 100px;
     text-align: center;
+}
+
+nav #nav_logo img{
+    height: 75px;
+    margin-top: 10px;
 }
 
 nav ul{
@@ -88,20 +93,72 @@ nav ul a:hover{
     margin-bottom: 25px;
 }
 
-
-/* GREEN CARDS */
+/* ADOPTION PAGES */
+/* green cards */
 .icon_sqaure{
-    background-color: green;
+    background-color: #c8f0d5;
     display: inline-block;
     height: 300px;
     width: 300px;
     margin: 20px;
     text-align: center;
     margin: 0px;
+    border-radius: 30px;
+}
+
+.icon_sqaure_link{
+    text-decoration: none;
+    color:#4c5d6d;
+}
+
+.icon_sqaure_link:hover{
+    text-decoration: none;
+    color: #4c5d6d;
+}
+
+.icon_sqaure a:visited{
+    text-decoration: none;
+    color: #4c5d6d;
+}
+
+.icon_sqaure:hover{
+    cursor: pointer;
 }
 
 .icon_sqaure img{
     width: 200px;
+    padding-top:20px;   
+}
+
+/* dropdowns */
+.adopt_dropdowns{
+    padding: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.adopt_dropdowns div{
+    display: inline-block;
+    width: 25%;
+}
+
+.adopt_dropdowns select{
+    width: 80%;
+}
+
+/* adoption images */
+.adopt_imgs{
+    text-align: center;
+}
+.adopt_imgs div{
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    display: inline-block;
+    background-image: url("../Images/placeholder_image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
