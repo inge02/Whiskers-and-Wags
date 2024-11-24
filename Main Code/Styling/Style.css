@@ -103,3 +103,66 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* --------------Event Page------------- */
+
+.event-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 1200px;
+    background: #d7e7f6;
+    font-family: sans-serif;
+
+}
+
+.event-text h2{
+    color: #4c5d6d;
+    font-weight: bold;
+}
+
+.event-image img{
+    width: 500px;
+    height: 100%;
+    margin-right: 50px;
+}
+
+.event-text button{
+    background: #4c5d6d;
+    color: #d7e7f6;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 76px;
+    cursor: pointer;
+}
+
+.event-text button:hover{
+    background: #afceee;
+    color: #4c5d6d;
+}
+
+@media only screen and (max-width: 600px) {
+    .event-details{
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .event-image img{
+        width: 400px;
+    }
+
+    .event-text{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
