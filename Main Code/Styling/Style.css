@@ -146,6 +146,21 @@ nav ul a:hover{
 
 /* ADOPTION PAGES */
 /* green cards */
+
+.card_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card_col{
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .icon_sqaure{
     background-color: #c8f0d5;
     display: inline-block;
@@ -155,6 +170,7 @@ nav ul a:hover{
     text-align: center;
     margin: 0px;
     border-radius: 30px;
+    transition: ease 1s;
 }
 
 .icon_sqaure_link{
@@ -178,8 +194,55 @@ nav ul a:hover{
 
 .icon_sqaure img{
     width: 200px;
-    padding-top:20px;   
+    padding-top:20px;
+    transition: ease 1s;   
 }
+
+@media(max-width: 1020px){
+    .icon_sqaure{
+        width: 200px;
+        height: 200px;  
+    }
+
+    .icon_sqaure img{
+        width: 130px;   
+    }
+}
+
+@media(max-width: 720px){
+    .icon_sqaure{
+        width: 150px;
+        height: 150px;  
+    }
+
+    .icon_sqaure img{
+        width: 80px;   
+    }  
+
+    .hero_img{
+        height: 400px;
+    } 
+}
+
+@media(max-width:574px){
+    .card_col{
+        width: 100%;
+    }
+    .icon_sqaure{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;  
+    }
+
+    .icon_sqaure img{
+        width: 130px;   
+    }
+
+    .hero_img{
+        height: 200px;
+    } 
+}
+
 
 /* dropdowns */
 .adopt_dropdowns{
