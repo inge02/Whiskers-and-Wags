@@ -1,12 +1,12 @@
 /* NAV BAR */
 
-nav #nav_logo {
+nav .nav_logo {
     background-color: #afceee;
     height: 100px;
     text-align: center;
 }
 
-nav #nav_logo img{
+nav .nav_logo img{
     height: 75px;
     margin-top: 10px;
 }
