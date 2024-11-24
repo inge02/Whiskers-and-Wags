@@ -103,3 +103,168 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* ------------------Donate page-------------- */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.donate-image{
+    height: 400px;
+}
+
+.donate-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.donate-heading h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #4c5d6d;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.donate-dropdown{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collapsible{
+    max-width: 650px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.collapsible input{
+    display: none;
+}
+
+
+
+.collapsible label{
+    position: relative;
+    font-weight: 600;
+    background: #afceee;
+    box-shadow: 0 5px 11px rgb(0, 0, 0,.1), 0 4px 11px 0 rgb(0, 0, 0,.08);
+    color: #4c5d6d;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1;
+    margin-top: 15px;
+}
+
+.collapsible label::after{
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    background: url("../Images/arrow.png") no-repeat 0 0;
+}
+
+.collapsible-text{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    width: 650px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+
+.collapsible-donate{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.collapsible input:checked ~ .collapsible-donate{
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #d7e7f6;
+    box-shadow: 0 5px 11px rgb(0, 0, 0,.1), 0 4px 11px 0 rgb(0, 0, 0,.08);
+    opacity: 1;
+    top:0;
+}
+
+.collapsible input:checked ~ .collapsible-text{
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #d7e7f6;
+    box-shadow: 0 5px 11px rgb(0, 0, 0,.1), 0 4px 11px 0 rgb(0, 0, 0,.08);
+    opacity: 1;
+    top:0;
+}
+
+.collapsible-text h2{
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color: #4c5d6d;
+}
+
+.donate-text{
+    text-align: center;
+    padding: 30px 30px 0;
+}
+
+.donate-text h2{
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color: #4c5d6d;
+}
+
+.collapsible-text img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 650px;
+    font-family: sans-serif;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+th{
+    text-align: center;
+}
+
+.table-headers{
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
