@@ -423,11 +423,15 @@ ul{
     margin-bottom: 50px;
 }
 
-.admin_login_form input[type=text]{
+.admin_login_form input[type=text], input[type=password]{
     padding: 5px;
     font-size: 15px;
     width: 100%;
     margin-bottom: 15px;
+}
+
+.admin_login_form input[type=text]:hover, input[type=password]:hover{
+    border: solid 2px black;
 }
 
 .admin_login_form label{
@@ -460,6 +464,11 @@ ul{
     color: white;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+}
+
+#login_btn:hover{
+    background-color: #a6ecde;
 }
 
 .admin_login_form div{
