@@ -416,47 +416,47 @@ ul{
     margin: 50px;
 }
 
-.admin_login_form{
+.admin_form{
     display: inline-block;
     text-align: left;
     width: 300px;
     margin-bottom: 50px;
 }
 
-.admin_login_form input[type=text], input[type=password]{
+.admin_form input[type=text], input[type=password]{
     padding: 5px;
     font-size: 15px;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.admin_login_form input[type=text]:hover, input[type=password]:hover{
+.admin_form input[type=text]:hover, input[type=password]:hover{
     border: solid 2px black;
 }
 
-.admin_login_form label{
+.admin_form label{
     display: inline-block;
     margin-bottom: 5px;
     font-size: 20px;
 }
 
-.login_links{
+.admin_links{
    text-align: center;
    margin-top: 20px;
 }
 
-.login_links a{
+.admin_links a{
     text-decoration: none;
     font-size: 20px;
     color: #4c5dfa;
 }
 
-.login_links a:hover{
+.admin_links a:hover{
     text-decoration: none;
     color: #37cab6;
 }
 
-#login_btn{
+.admin_btn{
     font-size: 20px;
     padding: 10px;
     width: 60%;
@@ -467,10 +467,10 @@ ul{
     cursor: pointer;
 }
 
-#login_btn:hover{
+.admin_btn:hover{
     background-color: #a6ecde;
 }
 
-.admin_login_form div{
+.admin_form div{
     text-align: center;
 }
