@@ -1,5 +1,5 @@
 /* NAV BAR */
-#nav{
+#nav, #admin_nav{
     position: sticky; top: 0
 }
 

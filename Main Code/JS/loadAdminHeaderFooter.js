@@ -1,4 +1,4 @@
-fetch('Navbar.html').then(res=> res.text()).then(data => {
+fetch('adminNavbar.html').then(res=> res.text()).then(data => {
     document.getElementById('admin_nav').innerHTML = data;
 }).catch(error => console.error('Error loading Navbar:', error));
 
