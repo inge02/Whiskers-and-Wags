@@ -1,12 +1,15 @@
 /* NAV BAR */
+#nav, #admin_nav{
+    position: sticky; top: 0
+}
 
-nav #nav_logo {
+nav .nav_logo {
     background-color: #afceee;
     height: 100px;
     text-align: center;
 }
 
-nav #nav_logo img{
+nav .nav_logo img{
     height: 75px;
     margin-top: 10px;
 }
@@ -19,7 +22,7 @@ nav ul{
     padding: 20px;
     margin-bottom: 0px;
     text-align: center;
-    
+    box-shadow: 0 2px 5px -2px #4c5d6d;
 }
 
 nav ul a{
@@ -143,6 +146,21 @@ nav ul a:hover{
 
 /* ADOPTION PAGES */
 /* green cards */
+
+.card_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card_col{
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .icon_sqaure{
     background-color: #c8f0d5;
     display: inline-block;
@@ -150,8 +168,8 @@ nav ul a:hover{
     width: 300px;
     margin: 20px;
     text-align: center;
-    margin: 0px;
     border-radius: 30px;
+    transition: ease 1s;
 }
 
 .icon_sqaure_link{
@@ -175,8 +193,55 @@ nav ul a:hover{
 
 .icon_sqaure img{
     width: 200px;
-    padding-top:20px;   
+    padding-top:20px;
+    transition: ease 1s;   
 }
+
+@media(max-width: 1020px){
+    .icon_sqaure{
+        width: 200px;
+        height: 200px;  
+    }
+
+    .icon_sqaure img{
+        width: 130px;   
+    }
+}
+
+@media(max-width: 720px){
+    .icon_sqaure{
+        width: 150px;
+        height: 150px;  
+    }
+
+    .icon_sqaure img{
+        width: 80px;   
+    }  
+
+    .hero_img{
+        height: 400px;
+    } 
+}
+
+@media(max-width:574px){
+    .card_col{
+        width: 100%;
+    }
+    .icon_sqaure{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;  
+    }
+
+    .icon_sqaure img{
+        width: 130px;   
+    }
+
+    .hero_img{
+        height: 200px;
+    } 
+}
+
 
 /* dropdowns */
 .adopt_dropdowns{
@@ -362,15 +427,15 @@ ul{
     transition: 0.2s;
 }
 
-input:checked + .toggle-button{
+.toggle input:checked + .toggle-button{
     background-color: #afceee;
 }
 
-input:checked + .toggle-button::before{
+.toggle input:checked + .toggle-button::before{
     transform: translateX(25px);
 }
 
-input{
+.toggle input{
     display: none;
 }
 
@@ -455,4 +520,81 @@ input{
         margin-left: 25px;
         margin-right: 25px;
     }
+}
+
+/* Admin Login */
+.admin_pfp i{
+    font-size: 100px;
+    color: white;
+    z-index: 1;
+    padding: 20px;
+}
+
+.circle{
+    background-color: black;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    z-index: -1;
+    margin: 50px;
+}
+
+.admin_form{
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.admin_form input[type=text], input[type=password]{
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.admin_form input[type=text]:hover, input[type=password]:hover{
+    border: solid 2px black;
+}
+
+.admin_form label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.admin_links{
+   text-align: center;
+   margin-top: 20px;
+}
+
+.admin_links a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #4c5dfa;
+}
+
+.admin_links a:hover{
+    text-decoration: none;
+    color: #37cab6;
+}
+
+.admin_btn{
+    font-size: 20px;
+    padding: 10px;
+    width: 60%;
+    background-color: #4bcab1;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.admin_btn:hover{
+    background-color: #a6ecde;
+}
+
+.admin_form div{
+    text-align: center;
 }

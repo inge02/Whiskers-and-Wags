@@ -6,6 +6,7 @@
     <title>Basic Pet Care</title>
     <link href="Styling/Style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
+    <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
     <script src="JS/loadHeaderFooter.js"></script>
 </head>
 <body>
@@ -23,40 +24,72 @@
     <div class="content">
         <h2>Stuff</h2>
 
+        <div class="container">
+            <div class="card_row">
+                <div class="card_col">
+                    <div id="card_vacine" class="icon_sqaure" onmouseover="document.getElementById('anim_vac').src='GIFs/vacine.gif'" onmouseleave="document.getElementById('anim_vac').src='Images/vacine_frame.png'">
+                        <img id="anim_vac" src="Images/vacine_frame.png">
+                        <h4>Vacinations</h4>
+                    </div>
+                </div>
+
+                <div class="card_col">
+                    <div id="card_deworm" class="icon_sqaure" onmouseover="document.getElementById('anim_worm').src='GIFs/worm.gif'" onmouseleave="document.getElementById('anim_worm').src='Images/worm_frame.png'">
+                        <img id="anim_worm" src="Images/worm_frame.png">
+                        <h4>Deworming</h4>
+                    </div>
+                </div>
+
+                <div class="card_col">
+                    <div id="card_steril" class="icon_sqaure" onmouseover="document.getElementById('anim_steril').src='GIFs/sterilization.gif'" onmouseleave="document.getElementById('anim_steril').src='Images/steril_frame.png'">
+                        <img id="anim_steril" src="Images/steril_frame.png">
+                        <h4>Sterilazation</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_row">
+                <div class="card_col">
+                    <div id="card_care" class="icon_sqaure" onmouseover="document.getElementById('anim_care').src='GIFs/care.gif'" onmouseleave="document.getElementById('anim_care').src='Images/care_frame.png'">
+                        <img id="anim_care" src="Images/care_frame.png">
+                        <h4>Basic Care</h4>
+                    </div>
+                </div>
+
+                <div class="card_col">
+                    <div id="card_travel" class="icon_sqaure" onmouseover="document.getElementById('anim_travel').src='GIFs/travel.gif'" onmouseleave="document.getElementById('anim_travel').src='Images/travel_frame.png'">
+                        <img id="anim_travel" src="Images/travel_frame.png">
+                        <h4>Traveling</h4>
+                    </div>
+                </div>
+
+                <div class="card_col">
+                    <div id="card_euthanize" class="icon_sqaure" onmouseover="document.getElementById('anim_euthanize').src='GIFs/dove.gif'" onmouseleave="document.getElementById('anim_euthanize').src='Images/dove_frame.png'">
+                        <img id="anim_euthanize" src="Images/dove_frame.png">
+                        <h4>Euthanization</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="evenly_distribute_children">
             
-            <div id="card_vacine" class="icon_sqaure" onmouseover="document.getElementById('anim_vac').src='GIFs/vacine.gif'" onmouseleave="document.getElementById('anim_vac').src='Images/vacine_frame.png'">
-                <img id="anim_vac" src="Images/vacine_frame.png">
-                <h4>Vacinations</h4>
-            </div>
+            
 
-            <div id="card_deworm" class="icon_sqaure" onmouseover="document.getElementById('anim_worm').src='GIFs/worm.gif'" onmouseleave="document.getElementById('anim_worm').src='Images/worm_frame.png'">
-                <img id="anim_worm" src="Images/worm_frame.png">
-                <h4>Deworming</h4>
-            </div>
+            
 
-            <div id="card_steril" class="icon_sqaure" onmouseover="document.getElementById('anim_steril').src='GIFs/sterilization.gif'" onmouseleave="document.getElementById('anim_steril').src='Images/steril_frame.png'">
-                <img id="anim_steril" src="Images/steril_frame.png">
-                <h4>Sterilazation</h4>
-            </div>
+            
         </div>
         <br>
 
         <div class="evenly_distribute_children">
-            <div id="card_care" class="icon_sqaure" onmouseover="document.getElementById('anim_care').src='GIFs/care.gif'" onmouseleave="document.getElementById('anim_care').src='Images/care_frame.png'">
-                <img id="anim_care" src="Images/care_frame.png">
-                <h4>Basic Care</h4>
-            </div>
+            
 
-            <div id="card_travel" class="icon_sqaure" onmouseover="document.getElementById('anim_travel').src='GIFs/travel.gif'" onmouseleave="document.getElementById('anim_travel').src='Images/travel_frame.png'">
-                <img id="anim_travel" src="Images/travel_frame.png">
-                <h4>Traveling</h4>
-            </div>
+            
 
-            <div id="card_euthanize" class="icon_sqaure" onmouseover="document.getElementById('anim_euthanize').src='GIFs/dove.gif'" onmouseleave="document.getElementById('anim_euthanize').src='Images/dove_frame.png'">
-                <img id="anim_euthanize" src="Images/dove_frame.png">
-                <h4>Euthanization</h4>
-            </div>
+            
         </div>
 
     </div>
