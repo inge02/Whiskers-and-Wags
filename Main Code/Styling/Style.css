@@ -103,3 +103,87 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* -------------- Admin Event Page----------------- */
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.admin-home-image img{
+    height: 350px;
+    width: 100%;
+}
+
+.admin-home-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 150px 100px;
+}
+
+.admin-home-buttons input{
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.admin-home-buttons .add{
+    background:#4bcab1;
+    color: white;
+}
+
+.admin-home-buttons .remove{
+    background:#EA8F8F;
+    color: white;
+}
+
+.admin-home-buttons .update{
+    background:#f4da7a;
+    color: white;
+}
+
+.admin-home-buttons .add:hover{
+    background:#a6ecde;
+}
+
+.admin-home-buttons .remove:hover{
+    background:#E6ADAD;
+}
+
+.admin-home-buttons .update:hover{
+    background:#f4e3a5;
+}
+
+.admin-home-table tr td img{
+    width: 200px;
+    height: 250x;
+}
+
+.admin-home-table{
+    padding: 70px;
+}
+
+.admin-home-table table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-home-table th{
+    background: #4c5d6d;
+    color: #d7e7f6;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.admin-home-table td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
