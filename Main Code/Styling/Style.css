@@ -103,3 +103,65 @@ nav ul a:hover{
 .icon_sqaure img{
     width: 200px;
 }
+
+
+/* --------------------Admin Home Page------------------- */
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.admin-home-image img{
+    height: 350px;
+    width: 100%;
+}
+
+.admin-home-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 150px 100px;
+}
+
+.admin-home-buttons input{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #afceee;
+    color: #4c5d6d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin-home-buttons input:hover{
+    background: #d7e7f6;
+}
+
+.admin-home-table tr td img{
+    width: 200px;
+    height: 250x;
+}
+
+.admin-home-table{
+    padding: 70px;
+}
+
+.admin-home-table table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-home-table th{
+    background: #4c5d6d;
+    color: #d7e7f6;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.admin-home-table td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
