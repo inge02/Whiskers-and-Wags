@@ -596,6 +596,14 @@ ul{
     background-color: #a6ecde;
 }
 
+#login_back_btn{
+    background-color: rgba(85, 95, 235, 0.884);
+}
+
+#login_back_btn:hover{
+    background-color: rgba(134, 169, 235, 0.884);
+}
+
 .admin_form div{
     text-align: center;
 }
