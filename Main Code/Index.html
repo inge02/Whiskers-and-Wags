@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styling/Style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
+    <title>Home Page</title>
+</head>
+<body class="Home-page">
+    <div class="admin-home-img">
+        <img src="/Main Code/Images/placeholder_image.png">
+    </div>
+    <div class="wellcome-msg">
+        <h1>Wellcome</h1>
+        <h2>Username</h2>
+    </div>
+    <div class="admin-catagories">
+        <h1>What do you want to do?</h1>
+        <div class="admin-evenly_distribute_children">
+            
+            <div id="card_care" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_care').src='GIFs/care.gif'" onmouseleave="document.getElementById('anim_care').src='Images/care_frame.png'">
+                <img id="anim_care" src="Images/care_frame.png">
+                <h4>Edit Gallery</h4>
+            </div>
+
+            <div id="card_dog" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_dog').src='GIFs/dog.gif'" onmouseleave="document.getElementById('anim_dog').src='Images/dog_frame.png'">
+                <img id="anim_dog" src="Images/dog_frame.png">
+                <h4>Edit Pets</h4>
+            </div>
+
+            <div id="card_travel" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_travel').src='GIFs/travel.gif'" onmouseleave="document.getElementById('anim_travel').src='Images/travel_frame.png'">
+                <img id="anim_travel" src="Images/travel_frame.png">
+                <h4>Edit Events</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
