@@ -263,15 +263,16 @@ nav ul a:hover{
 .adopt_imgs{
     text-align: center;
 }
-.adopt_imgs div{
+.adopt_imgs img{
     width: 250px;
     height: 250px;
     margin: 20px;
     display: inline-block;
-    background-image: url("../Images/placeholder_image.png");
+    object-fit: cover;
+    /* background-image: url("../Images/placeholder_image.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
