@@ -105,7 +105,8 @@ nav ul a:hover{
 }
 
 
-/* -------------- Admin Event Page----------------- */
+
+/* -------------- Admin Event Page / Admin pet Page----------------- */
 
 body{
     font-family: sans-serif;
@@ -113,7 +114,7 @@ body{
 }
 
 .admin-home-image img{
-    height: 350px;
+    height:400px;
     width: 100%;
 }
 
@@ -187,3 +188,24 @@ body{
     padding: 20px;
 }
 
+@media only screen and (max-width: 400px) {
+    .admin-home-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .admin-home-buttons input[type="button"]{
+        margin: 10px;
+    }
+
+    .admin-home-image img{
+        height: 200px;
+    }
+
+    .admin-home-table{
+        padding: 30px;
+        overflow-x: scroll;
+    }
+}
