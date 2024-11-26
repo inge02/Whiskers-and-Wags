@@ -814,3 +814,202 @@ body{
     }
 }
 
+
+
+/* ---------------Donate page---------- */
+.donate-body{
+    margin:0 ;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 600px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin:20px;
+    padding: 10px;
+    border-radius: 8px;
+    background:#afceee;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0, 0.15),
+                -6px -6px 10px -1px rgba(255,255,255, 0.7);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.accordion label::before{
+    content: "+";
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.accordion input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    color: black;
+    line-height: 35px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+/* .accordion .donate-content{
+    color: black;
+    line-height: 35px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+} */
+
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: fit-content;
+    padding: 10px 10px 20px;
+}
+
+/* .accordion input[type="radio"]:checked + label + .donate-content{
+    max-height: fit-content;
+    padding: 10px 10px 20px;
+} */
+
+.accordion input[type="radio"]:checked + label::before{
+    content: "-";   
+}
+
+
+.accordion .content .form-content label::before{
+    content: none;
+}
+
+.accordion .content .form-content form{
+    display: flex;
+    flex-direction: column;
+    background: #d7e7f6;
+    padding: 20px;
+}
+
+.accordion .content .form-content form label{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.accordion .content .form-content form input{
+    height: 30px;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.accordion .content .form-content form .button{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.accordion .content .form-content form .button input[type="button"]{
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background: #4bcab1;
+    font-size: medium;
+}
+
+.accordion .content .form-content form .button input[type="button"]:hover{
+    background: #a6ecde;
+}
+
+.accordion .content .form-content img{
+    width: 85px;
+    height: 40px;
+    background: white;
+    padding: 5px;
+}
+
+.donate-body img{
+    width: 100%;
+    height: 400px;
+}
+
+.donate-body h1{
+    color: #4c5d6d;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.accordion .content .zapper-qr{
+    width: 200px;
+    height: 200px;
+}
+
+.accordion .content table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.accordion .content td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.donate-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.donate-text{
+    text-align: center;
+}
+
+.donate-text h2{
+    color: #4c5d6d;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 400px) {
+    .accordion{
+        width: 300px;
+        margin:0 20px;
+    }
+
+    .donate-body img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .form-row{
+        flex-direction: column;
+    }
+
+    .accordion input[type="radio"]:checked + label + .content {
+        overflow-x: scroll;
+    }
+}

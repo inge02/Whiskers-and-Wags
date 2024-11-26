@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24a3ca1df6.js" crossorigin="anonymous"></script>
+    <link href="Styling/Style.css" rel="stylesheet">
+    <title>Donate Page</title>
+</head>
+<body class="donate-body">
+    <img src="/Main Code/Images/placeholder_image.png">
+    <h1>Choose Prefered manner</h1>
+    <div>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first" >
+                <label for="first"><i class="fa-regular fa-credit-card" style="padding: 0 20px;"></i>Card Payment</label>
+                <div class="content">
+                    <div class="form-content">
+                        <form>
+                            <img src="/Main Code/Images/Visa-Mastercard.webp">
+                            <label for="card-name">Name on card</label>
+                            <input type="text" id="card-name" required>
+                            <label for="card-email">Email</label>
+                            <input type="email" id="card-email" required>
+                            <label for="card-num">Card number</label>
+                            <input type="text" id="card-num" required maxlength="19" minlength="13" >
+                            <div class="form-row">
+                                <label for="expire-date">Expiry Date</label>
+                                <input type="date" id="expire-date" required>
+                                <label for="card-code">CVV</label>
+                                <input type="text" id="card-code" required minlength="3" maxlength="3">
+                            </div>
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" min="0" >
+                            <div class="button">
+                                <input type="button" value="Pay">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second"><i class="fa-solid fa-qrcode" style="padding: 0 20px;"></i>Zapper</label>
+                <div class="content">
+                    <h2>Scan the QR code with your Zapper app to complete your payment</h2>
+                    <img class="zapper-qr" src="/Main Code/Images/zapper.png">
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third"><i class="fa-solid fa-building-columns" style="padding: 0 20px;"></i>EFT</label>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <th colspan="5"><h2>Account Details</h2></th>
+                        </tr>
+                        <tr class="table-headers">
+                            <td><b>Bank:</b></td>
+                            <td><b>Account name:</b></td>
+                            <td><b>Account number:</b></td>
+                            <td><b>Branch code:</b></td>
+                            <td><b>Account type:</b></td>
+                        </tr>
+                        <tr class="table-text">
+                            <td>ABSA</td>
+                            <td>Whiskers and Wags</td>
+                            <td>1425698733</td>
+                            <td>632005</td>
+                            <td>Tjek</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="forth">
+                <label for="forth"><i class="fa-brands fa-paypal" style="padding: 0 20px;"></i>PayPal</label>
+                <div class="content">
+                    <div class="form-content">
+                        <form>
+                            <img src="/Main Code/Images/paypal.png">
+                            <label for="card-name">Name on card</label>
+                            <input type="text" id="card-name" required>
+                            <label for="card-email">Email</label>
+                            <input type="email" id="card-email" required>
+                            <label for="card-num">Card number</label>
+                            <input type="text" id="card-num" required maxlength="19" minlength="13" >
+                            <div class="form-row">
+                                <label for="expire-date">Expiry Date</label>
+                                <input type="date" id="expire-date" required>
+                                <label for="card-code">CVV</label>
+                                <input type="text" id="card-code" required minlength="3" maxlength="3">
+                            </div>
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" min="0" >
+                            <div class="button">
+                                <input type="button" value="Pay">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <!-- <li>
+                <input type="radio" name="accordion" id="forth">
+                <label for="forth"><i class="fa-solid fa-bag-shopping" style="padding: 0 20px;"></i>Donate Items</label>
+                <div class="donate-content">
+                    <div class="donate-text">
+                        <h2>Address</h2>
+                        <p>Interpace Street, Wellington, 7655</p>
+                        <h2>Phone</h2>
+                        <p> 021 864 3726</p><br>
+                    </div>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13285.308404684985!2d18.9830875!3d-33.6486854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcd06041c57c9e3%3A0x656085330d164c93!2sS.P.C.A%20-%20Wellington%20-%20By%20Appointment%20only!5e0!3m2!1sen!2sza!4v1732462215608!5m2!1sen!2sza" width="200" height="250" style="border:0; padding:30px 30px 0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</body>
+</html>
