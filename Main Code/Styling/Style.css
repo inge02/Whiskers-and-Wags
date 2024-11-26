@@ -501,8 +501,7 @@ ul{
     cursor: pointer;
 }
 
-.event-text button:hover{
-}
+
 
 /* ------------------Home page----------- */
 
@@ -1011,5 +1010,104 @@ body{
 
     .accordion input[type="radio"]:checked + label + .content {
         overflow-x: scroll;
+    }
+}
+
+
+
+
+/* -----------------Index Page------------------ */
+.Home-page{
+    margin: 0;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+.admin-home-img{
+    height: 400px;
+}
+
+.admin-home-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.wellcome-msg{
+    color: #4c5d6d;
+    background: #d7e7f6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+
+.wellcome-msg h2{
+    color: black;
+}
+
+.admin-catagories{
+    padding: 20px 60px;
+}
+
+.admin-catagories h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.admin-catagories{
+    padding: 40px 60px;
+}
+
+.admin-icon_sqaure{
+    background-color: #c8f0d5;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 30px;
+}
+
+.icon_sqaure_link{
+    text-decoration: none;
+    color:#4c5d6d;
+}
+
+.icon_sqaure_link:hover{
+    text-decoration: none;
+    color: #4c5d6d;
+}
+
+.admin-icon_sqaure a:visited{
+    text-decoration: none;
+    color: #4c5d6d;
+}
+
+.admin-icon_sqaure:hover{
+    cursor: pointer;
+}
+
+.admin-icon_sqaure img{
+    width: 150px;
+}
+
+.admin-evenly_distribute_children{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media(max-width: 400px){
+
+    .admin-home-img{
+        height: 200px;
+    }
+
+    .admin-evenly_distribute_children{
+        flex-direction: column;
     }
 }
