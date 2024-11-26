@@ -39,7 +39,7 @@ include('PHP/connect.php');
                 <h5>Age</h5>
                 <select id="adopt_age" name="age">
                     <option value="" disabled selected hidden>Select</option>
-                    <option value="Puppy">Puppy</option>
+                    <option value="Juvenile">Juvenile</option>
                     <option value="Adult">Adult</option>
                     <option value="Senior">Senior</option>
                 </select>

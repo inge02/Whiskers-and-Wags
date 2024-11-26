@@ -3,6 +3,7 @@
         $age_filter = "";
         $size_filter = "";
         $gender_filter ="";
+        $category = isset($_GET['category']) ? $_GET['category']: '';
 
         //check if apply is clicked
         if (isset($_POST["apply"])){
@@ -31,6 +32,9 @@
         if($gender_filter){
             $filters[] = "gender = '$gender_filter'";
         }
+        if($category){
+            $filters[] = "category = '$category'";
+        }
 
         if(!empty($filters)){
             $query .= " WHERE " .implode(" AND ", $filters);
@@ -54,5 +58,7 @@
                 echo "<img class='pet_pf' src='$img_url' id='$id' data-name='$name' data-age='$age' data-breed='$breed' data-size='$size' data-gender='$gender' data-desc='$description'>";
 
             }
+        } else{
+            echo "<h5>There are no pets that fit the criteria!</h5> <img style='width:150px; height:150px' src='GIFs/magnifying-glass.gif'>";
         }
         ?>
