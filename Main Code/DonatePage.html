@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styling/Style.css" rel="stylesheet">
+    <title>Donate Page</title>
+</head>
+<body class="donate-body">
+    <img src="/Main Code/Images/placeholder_image.png">
+    <h1>Choose Prefered manner</h1>
+    <div>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first" >
+                <label for="first">Card Payment</label>
+                <div class="content">
+                    <div class="form-content">
+                        <form>
+                            <img src="/Main Code/Images/Visa-Mastercard.webp">
+                            <label for="card-name">Name on card</label>
+                            <input type="text" id="card-name" required>
+                            <label for="card-email">Email</label>
+                            <input type="email" id="card-email" required>
+                            <label for="card-num">Card number</label>
+                            <input type="text" id="card-num" required maxlength="19" minlength="13" >
+                            <div class="form-row">
+                                <label for="expire-date">Expiry Date</label>
+                                <input type="date" id="expire-date" required>
+                                <label for="card-code">CVV</label>
+                                <input type="text" id="card-code" required minlength="3" maxlength="3">
+                            </div>
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" min="0" >
+                            <div class="button">
+                                <input type="button" value="Pay">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second">Zapper</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, unde. Necessitatibus incidunt illo similique, 
+                        magnam quidem ex perspiciatis ut harum doloribus atque ipsum aut sapiente sequi, corporis ipsa repellendus eius.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third">EFT</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, unde. Necessitatibus incidunt illo similique, 
+                        magnam quidem ex perspiciatis ut harum doloribus atque ipsum aut sapiente sequi, corporis ipsa repellendus eius.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="forth">
+                <label for="forth">PayPal</label>
+                <div class="content">
+                    <div class="form-content">
+                        <form>
+                            <img src="/Main Code/Images/paypal.png">
+                            <label for="card-name">Name on card</label>
+                            <input type="text" id="card-name" required>
+                            <label for="card-email">Email</label>
+                            <input type="email" id="card-email" required>
+                            <label for="card-num">Card number</label>
+                            <input type="text" id="card-num" required maxlength="19" minlength="13" >
+                            <div class="form-row">
+                                <label for="expire-date">Expiry Date</label>
+                                <input type="date" id="expire-date" required>
+                                <label for="card-code">CVV</label>
+                                <input type="text" id="card-code" required minlength="3" maxlength="3">
+                            </div>
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" min="0" >
+                            <div class="button">
+                                <input type="button" value="Pay">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="forth">
+                <label for="forth">Donate Items</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, unde. Necessitatibus incidunt illo similique, 
+                        magnam quidem ex perspiciatis ut harum doloribus atque ipsum aut sapiente sequi, corporis ipsa repellendus eius.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
