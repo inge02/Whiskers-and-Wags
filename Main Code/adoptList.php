@@ -14,7 +14,7 @@ include('PHP/connect.php');
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
 
     <link rel="stylesheet" href="Styling/Style.css">
-    <script src="JS/loadHeaderFooter.js"></script>
+    
 
     <!-- links and scripts for bootstrap modal -->
     <!-- jQuery library -->
@@ -84,7 +84,7 @@ include('PHP/connect.php');
     <div id="pet_modal" class="modal" tabindex="-1" role="dialog" style="display: none; background-color: #d7e7f6;">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                
+
                 <div class="modal-header">
                     <h4 id="modal_pet_name" class="modal-title">Modal title</h4>
                     <button id="close_btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -132,6 +132,7 @@ include('PHP/connect.php');
     <div id="footer"></div>
 
     <script src="JS/adoptList.js"></script>
+    <script src="JS/loadHeaderFooter.js"></script>
     
 </body>
 </html>
