@@ -296,6 +296,12 @@ nav ul a:hover{
     margin: auto;
 }
 
+.social-links, .footer-map{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -329,6 +335,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px 0;
 }
 
 
@@ -390,6 +397,9 @@ ul{
 @media(max-width: 574px){
     .footer-col{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 /* -----------------Settings--------------- */
@@ -405,6 +415,7 @@ ul{
     background-color: white;
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .toggle-button{
@@ -415,6 +426,7 @@ ul{
  cursor: pointer;
  position: relative;
  transition: 0.2s;
+ margin-top: 5px;
 }
 
 .toggle-button::before{
@@ -463,6 +475,7 @@ ul{
 }
 
 .help-link{
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     font-family: sans-serif;
@@ -478,6 +491,17 @@ ul{
     background: #d7e7f6;
     font-family: sans-serif;
 
+}
+
+.event-text{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.event-text p{
+    text-align: left;
 }
 
 .event-text h2{
@@ -499,7 +523,20 @@ ul{
     border-radius: 3px;
     height: 30px;
     width: 76px;
+    margin-bottom: 10px;
     cursor: pointer;
+}
+
+.event-text button:hover{
+    background: #afceee;
+    color: #4c5d6d;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .toggle{
+        margin-right: 30px;
+    }
 }
 
 
@@ -585,16 +622,19 @@ body{
 @media only screen and (max-width: 600px) {
     .event-details{
         flex-direction: column;
-        width: 400px;
+        width: 300px;
     }
 
     .event-image img{
-        width: 400px;
+        width: 300px;
     }
 
     .event-text{
         margin-left: 25px;
         margin-right: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        gap: 5px;
     }
 }
 
@@ -920,13 +960,11 @@ body{
     align-items: center;
 }
 
-.accordion .content .form-content form .button{
+.accordion .content .form-content form .button button{
     margin-top: 20px;
-    justify-content: center;
-    display: flex;
 }
 
-.accordion .content .form-content form .button input[type="button"]{
+.accordion .content .form-content form .button button{
     width: 150px;
     height: 35px;
     cursor: pointer;
@@ -937,7 +975,7 @@ body{
     font-size: medium;
 }
 
-.accordion .content .form-content form .button input[type="button"]:hover{
+.accordion .content .form-content form .button button:hover{
     background: #a6ecde;
 }
 
@@ -1183,6 +1221,20 @@ body{
     height: 30px;
 }
 
+@media(max-width: 400px){
+    .admin-add-form form{
+        width: 300px;
+    }
+    .admin-add-form form input[type="text"] {
+        width: 200px;
+    }
+
+    .admin-add-form form .form-together-content {
+        flex-direction: column;
+    }
+
+}
+
 
 .popup-form form .update-event-cost-time,.update-evet-dates{
     display: flex;
@@ -1192,10 +1244,6 @@ body{
     height: 30px;
     gap: 10px;
 }
-
-/* .popup-form form, .admin-add-form form input[type="number"]{
-    width: 60px;
-} */
 
 
 
@@ -1215,7 +1263,6 @@ body{
 .popup-form form{
     display:flex ;
     flex-direction: column;
-    width: fit-content;
     height: fit-content;
     justify-content: space-evenly;
     gap: 10px;
@@ -1244,7 +1291,7 @@ body.popup-active {
 
 
 .popup-form form input[type="text"]{
-    width: 300px;
+    width: 200px;
     height: 30px;
 }
 
@@ -1269,7 +1316,7 @@ body.popup-active {
     color: white;
     border: none;
     border-radius: 3px;
-    padding: 10px 30px;
+    padding: 10px 15px;
     width: fit-content;
     text-align: center;
 }
@@ -1395,5 +1442,29 @@ body.popup-active {
         padding: 30px;
         overflow-x: scroll;
     }
-}
 
+    .popup-form{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .popup-buttons{
+        gap: 10px;
+        justify-content: none;
+    }
+
+    .form-together-content{
+        flex-direction: column;
+    }
+
+    .popup-buttons .save-updates {
+        margin-right: 10px;
+
+    }
+
+    .popup-form form textarea{
+        width: 250px;
+    }
+    
+}

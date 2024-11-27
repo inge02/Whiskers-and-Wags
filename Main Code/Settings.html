@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/loadAdminHeaderFooter.js"></script>
+    
     <link href="Styling/Style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <div id="admin_nav"></div>
     <div class="toggle">
        <input type="checkbox" id="check">
        <label for="check" class="toggle-button"></label>
     </div>
 
     <div class="Button-list">
-        <button type="button">Profile</button>
-        <button type="button">Update Password</button>
-        <button type="button">Logout</button>
+        <button type="button" >Profile</button>
+        <button onclick="location.href='adminForgotPassword.html'"  >Update Password</button>
+        <button onclick="location.href='adminLogin.html'" >Logout</button>
     </div>
     <div class="help-link">
         <a href="#">HELP</a>
     </div>
-    
+    <div id="admin_footer"></div>
 </body>
 </html>
