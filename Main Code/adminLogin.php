@@ -20,7 +20,7 @@ include('PHP/connect.php');
 <body>
     <nav>
         <div class="nav_logo">
-            <a href="HomePage.html"><img src="Images/whiskers_&_wags_logo.png"></a>
+            <a href="index.html"><img src="Images/whiskers_&_wags_logo.png"></a>
         </div>
     </nav>
 
@@ -42,13 +42,7 @@ include('PHP/connect.php');
 
                 <label for="admin_password">Enter Password</label><br>
                 <input type="password" name="admin_password" id="admin_password" placeholder="Enter your password"><br>
-                <div><button id="login_btn" name="login" class="admin_btn">Login</button></div>
-                <br>
-                <div><button id="login_back_btn" name="back" class="admin_btn">Back</button></div>
-            </form>
-            <br>
-
-            <?php
+                <?php
 
                 if (isset($_POST['login'])){
                     $password = $_POST['admin_password'];
@@ -57,32 +51,43 @@ include('PHP/connect.php');
                     if((!$password) || (!$name)){
                         echo '<p style="color:red;font-size:20px; text-align:center;">Fill in all fields</p>';
                     } else{
-                        $query = "SELECT password FROM admins where username = '$name'";
+                        $sanitized_name = mysqli_real_escape_string($conn,$name);
+                        $sanitized_pass = mysqli_real_escape_string($conn,$password);
+
+                        $query = "SELECT username, password FROM admins where username = '". $sanitized_name."'";
                         $results = mysqli_query($conn, $query);
 
                         if (mysqli_num_rows($results) > 0){
                             $row = mysqli_fetch_assoc($results);
 
-                            if(password_verify($password,$row['password'])){
+                            if(password_verify($sanitized_pass,$row['password'])){
                                 echo "<script type='text/javascript'> window.location.href='adminGallery.html'</script>";
                             } else{
-                                echo '<p style="color:red;font-size:20px; text-align:center;">Username or password incorrect</p>';
+                                echo '<p style="color:red;font-size:20px; text-align:center;">Invalid Credentials</p>';
                             }
 
                         } else{
-                            echo '<p style="color:red;font-size:20px; text-align:center;">Username or password incorrect</p>';
+                            echo '<p style="color:red;font-size:20px; text-align:center;">Invalid Credentials</p>';
                         }
                     }
                 }
 
                 if (isset($_POST['back'])){
-                    echo "<script type='text/javascript'> window.location.href='HomePage.html'</script>";
+                    echo "<script type='text/javascript'> window.location.href='index.html'</script>";
                 }
 
             ?>
+            <br>
+                <div><button id="login_btn" name="login" class="admin_btn">Login</button></div>
+                <br>
+                <div><button id="login_back_btn" name="back" class="admin_btn">Back</button></div>
+            </form>
+            <br>
+
+            
 
             <div class="admin_links evenly_distribute_children">
-                <a href="adminForgotPassword.html">Forgot Password?</a>
+                <a href="adminForgotPassword.php">Forgot Password?</a>
                 <a href="">Help?</a>
             </div>
         </div>
