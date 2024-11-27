@@ -279,7 +279,8 @@ nav ul a:hover{
 
 .Logo{
     width: 250px;
-    height: 130px;
+    /* height: 130px; */
+    object-fit: cover;
     border-bottom: 2px solid;
     margin-bottom: 8px;
 }
@@ -1123,22 +1124,170 @@ body{
     height:400px;
     height: 400px;
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .admin-home-buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 100px 150px 100px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .admin-home-buttons input{
-    width: 160px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    font-size: large;
+    font-size: medium;
+}
+
+.admin-add-form{
+    display: flex;
+    justify-content: center;
+}
+
+.admin-add-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    background: #d7e7f6;
+    width: 600px;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.admin-add-form form label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.admin-add-form form input[type="text"]{
+    width: 300px;
+    height: 30px;
+}
+
+.admin-add-form form select{
+    width: 100px;
+    height: 30px;
+}
+
+
+
+
+
+
+.popup-form {
+    font-family: sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d7e7f6;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid #4c5d6d;
+    z-index: 1000;}
+
+.popup-form form{
+    display:flex ;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.popup-form form h1{
+    color: #4c5d6d;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.popup-form form label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.popup-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+body.popup-active {
+    overflow: hidden;
+} 
+
+
+.popup-form form input[type="text"]{
+    width: 300px;
+    height: 30px;
+}
+
+.popup-form form select{
+    width: 100px;
+    height: 30px;
+}
+
+
+.popup-buttons .save-updates{
+    background:#4bcab1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    width: fit-content;
+    text-align: center;
+}
+
+.popup-buttons .cancel-updates{
+    background:#EA8F8F;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    width: fit-content;
+    text-align: center;
+}
+
+
+.popup-buttons .save-updates:hover{
+    background:#a6ecde;
+}
+
+.popup-buttons .cancel-updates:hover{
+    background:#E6ADAD;
+}
+
+
+
+
+
+
+
+
+.form-together-content{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.form-together-content label{
+    margin-right: 6px;
+}
+
+.form-together-content select{
+    margin-right: 40px;
+}
+
+.admin-add-form form h1{
+    text-align: center;
+    text-decoration: underline;
+    color: #4c5d6d;
 }
 
 .admin-home-buttons .add{
@@ -1146,25 +1295,36 @@ body{
     color: white;
 }
 
-.admin-home-buttons .remove{
+.admin-home-table table tr td input{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+.admin-home-table table tr td .remove{
     background:#EA8F8F;
     color: white;
 }
 
-.admin-home-buttons .update{
+.admin-home-table table tr td .update{
     background:#f4da7a;
     color: white;
+    margin-bottom: 20px;
 }
 
 .admin-home-buttons .add:hover{
     background:#a6ecde;
 }
 
-.admin-home-buttons .remove:hover{
+.admin-home-table table tr td .remove:hover{
     background:#E6ADAD;
 }
 
-.admin-home-buttons .update:hover{
+.admin-home-table table tr td .update:hover{
     background:#f4e3a5;
 }
 
