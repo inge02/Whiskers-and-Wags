@@ -736,7 +736,11 @@ body{
     margin-bottom: 15px;
 }
 
-#add_img_btn{
+.add_gallery_form img{
+    width: 100%;
+}
+
+.add_img_btn{
     padding: 10px;
     background-color: #4bcab1;
     border: none;

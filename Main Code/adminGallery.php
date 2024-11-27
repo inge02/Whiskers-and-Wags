@@ -51,7 +51,7 @@ include('PHP/connect.php');
                     ?>
 
                     <div style='text-align:center;'>
-                        <button id='add_img_btn' name='add_img_btn'>Add Image</button>
+                        <button id='add_img' class='add_img_btn' name='add_img'>Add Image</button>
                     </div>
                     
 

@@ -2,7 +2,7 @@
 
 include('connect.php');
 
-if(isset($_POST['add_img_btn'])){
+if(isset($_POST['add_img'])){
     $desc = $_POST['desc'];
     $img = $_FILES['file'];
     $file_size= $_FILES['file']['size'];
