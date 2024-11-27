@@ -1175,7 +1175,27 @@ body{
 }
 
 
+.admin-add-form form .event-cost-time,.event-dates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
 
+
+.popup-form form .update-event-cost-time,.update-evet-dates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    gap: 10px;
+}
+
+/* .popup-form form, .admin-add-form form input[type="number"]{
+    width: 60px;
+} */
 
 
 
