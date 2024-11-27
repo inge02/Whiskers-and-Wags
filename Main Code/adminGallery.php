@@ -28,12 +28,33 @@ include('PHP/connect.php');
         <div class='admin_add_form'>
             <h2>Add Gallery Image</h2>
             <div class='add_gallery_form'>
-                <form>
-                    <label for='desc'>Upload File</label><br>
-                    <input id='desc' name='desc' type='file'><br>
+                <form method='post' action='PHP/add_gallery.php' enctype="multipart/form-data">
+                    <label for='file'>Upload File</label><br>
+                    <input id='file' name='file' type='file' accept="image/*"><br>
 
                     <label for='desc'>Image Description</label><br>
                     <textarea id='desc' name='desc' maxlength="300"></textarea>
+
+                    <?php
+                    
+                        if (isset($_GET['message'])){
+                            $msg = $_GET['message'];
+                            if ($msg == 'FileMissing'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to upload a file</p>';
+                            } elseif ($msg == 'Success'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Upload Successful!</p>';
+                            } elseif ($msg == 'DeleteSuccess'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
+                            }
+                        }
+                    
+                    ?>
+
+                    <div style='text-align:center;'>
+                        <button id='add_img_btn' name='add_img_btn'>Add Image</button>
+                    </div>
+                    
+
                 </form>
             </div>
 

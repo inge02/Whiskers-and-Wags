@@ -8,7 +8,7 @@ if ($_GET['img_id']){
     $result = mysqli_query($conn,$query);
 
     if($result){
-        header("location:../adminGallery.php");
+        header("location:../adminGallery.php?message=DeleteSuccess");
     }
 
 }
