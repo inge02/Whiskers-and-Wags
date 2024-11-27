@@ -25,7 +25,25 @@ include('PHP/connect.php');
     </div>
 
     <div class="content">
-        <div>
+        <div class='admin_add_form'>
+            <h2>Add Gallery Image</h2>
+            <div class='add_gallery_form'>
+                <form>
+                    <label for='desc'>Upload File</label><br>
+                    <input id='desc' name='desc' type='file'><br>
+
+                    <label for='desc'>Image Description</label><br>
+                    <textarea id='desc' name='desc' maxlength="300"></textarea>
+                </form>
+            </div>
+
+
+        </div>
+
+        
+
+        <div class='admin_table'>
+        <h2>Edit Gallery</h2>
             <table class="table table-hover table-bordered table-striped">
                 <thead>
                     <tr>
