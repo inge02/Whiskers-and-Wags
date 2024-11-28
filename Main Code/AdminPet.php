@@ -18,6 +18,28 @@ include('PHP/connect.php');
     <div class="admin-home-image">
         <img src="Images/placeholder_image.png">
     </div>
+
+    <?php
+                    
+                        if (isset($_GET['message'])){
+                            $msg = $_GET['message'];
+                            if ($msg == 'FileMissing'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to upload a file</p>';
+                            } elseif ($msg == 'Success'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Upload Successful!</p>';
+                            } elseif ($msg == 'DeleteSuccess'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
+                            } elseif ($msg == 'InfoMissing'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to fill in all fields!</p>';
+                            } elseif ($msg == 'UpdateSuccess'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Pet detials updated successfully!</p>';
+                            } elseif ($msg == 'UpdateFail'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">Pet detials could not update</p>';
+                            }
+                        }
+                    
+                    ?>
+
     <div class="admin-add-form">
         <form method="post" enctype="multipart/form-data" action='PHP/add_rescue.php'>
             <h1>Add a pet</h1>
@@ -62,23 +84,7 @@ include('PHP/connect.php');
             <label for="pet-discription">Discription</label>
             <textarea rows="4" cols="50" name="desc" id="desc" maxlength="300"></textarea>
 
-            <?php
-                    
-                        if (isset($_GET['message'])){
-                            $msg = $_GET['message'];
-                            if ($msg == 'FileMissing'){
-                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to upload a file</p>';
-                            } elseif ($msg == 'Success'){
-                                echo '<p style="color:green;font-size:20px; text-align:center;">Upload Successful!</p>';
-                            } elseif ($msg == 'DeleteSuccess'){
-                                echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
-                            }
-                            elseif ($msg == 'InfoMissing'){
-                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to fill in all fields!</p>';
-                            }
-                        }
-                    
-                    ?>
+            
 
             <div class="admin-home-buttons">
                 <button class="add" name="add_pet">Add Animal</button>
@@ -122,8 +128,8 @@ include('PHP/connect.php');
                                     <td><?php echo $row['age']?></td>
                                     <td><?php echo $row['gender']?></td>
                                     <td><?php echo $row['breed']?></td>
-                                    <td><a class="btn bg-warning text-white" href="update_rescue.php?img_id=<?php echo $id?>">Edit</a></td>
-                                    <td><a class="btn bg-danger text-white" href="PHP/delete_rescue.php?img_id=<?php echo $id?>">Delete</a></td>
+                                    <td><a class="btn bg-warning text-white" href="update_rescue.php?pet_id=<?php echo $id?>">Edit</a></td>
+                                    <td><a class="btn bg-danger text-white" href="PHP/delete_rescue.php?pet_id=<?php echo $id?>">Delete</a></td>
                                     
                                 </tr>
                                 
@@ -208,7 +214,7 @@ include('PHP/connect.php');
             </div>
         </form>
     </div>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", () => {
              // Open  Update Form
              document.querySelectorAll(".update").forEach((btn) => {
@@ -236,7 +242,7 @@ include('PHP/connect.php');
                 document.body.classList.remove("popup-active");
             });
         });
-    </script>
+    </script> -->
     <div id="admin_footer"></div>
 </body>
 </html>

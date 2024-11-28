@@ -2,8 +2,8 @@
 
 include('connect.php');
 
-if ($_GET['img_id']){
-    $id = $_GET['img_id'];
+if ($_GET['pet_id']){
+    $id = $_GET['pet_id'];
 
     $query = "SELECT file_name FROM rescues WHERE rescue_id = '".$id."'";
     $result = mysqli_query($conn,$query);
