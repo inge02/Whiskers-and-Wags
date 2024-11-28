@@ -1,52 +1,3 @@
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="JS/loadAdminHeaderFooter.js"></script>
-    <link href="Styling/Style.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-<div id="update-form" class="popup-form">
-        <form method="POST" enctype="multipart/form-data" action="AdminEvent.php">
-            <input type="hidden" name="event_id" id="event-id">
-            <h1>Update Event</h1>
-            <label for="Event-pic">Upload Picture</label>
-            <input name="img_file" type="file" id="Event-pic">
-            <label for="event-name">Enter Event Name</label>
-            <input name="event_name" type="text" id="event-name" value="<?php echo $row['event_name']?>" required>
-            <div class="event-dates">
-                <label for="event-start-date">Start Date</label>
-                <input name="startDate" type="date" id="event-start-date" value="<?php echo $row['startDate']?>" required>
-                <label for="event-end-date">End Date</label>
-                <input name="end_date" type="date" id="event-end-date" value="<?php echo $row['end_date']?>" required>
-            </div>
-            <label for="event-venue">Event Venue</label>
-            <input name="venue" type="text" id="event-venue" value="<?php echo $row['venue']?>" required>
-            <div class="event-cost-time">
-                <label for="event-time">Enter Event Time</label>
-                <input name="event_time" type="time" id="event-time" value="<?php echo $row['event_time']?>" required>
-                <label for="event-cost">Enter Cost</label>
-                <input name="event_cost" type="number" id="event-cost" min="0" value="<?php echo $row['event_cost']?>"  required>
-            </div>
-            <label for="event-description">Description</label>
-            <textarea name="event_description" id="event-description" rows="4" cols="50"><?php echo $row['event_discription']?></textarea>
-            <div class="admin-home-buttons">
-                <div class="popup-buttons">
-                    <button onclick="location.href='AdminEvent.php'"  type="submit" name="update_submit" class="save-updates">Save Changes</button>
-                    <button  onclick="location.href='AdminEvent.php'" class="cancel-updates">Cancel</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-</html> -->
-
-
-
 
 <?php
 include('Subscribe_data_con.php');
@@ -138,6 +89,7 @@ if (isset($_POST['update'])) {
     <title>Update Event</title>
 </head>
 <body>
+    <div id="admin_nav"></div>
     <div id="update-form" class="popup-form">
         <form method="POST" enctype="multipart/form-data" action="">
             <!-- Hidden input to store event ID -->
@@ -179,5 +131,6 @@ if (isset($_POST['update'])) {
             </div>
         </form>
     </div>
+    <div id="admin_footer"></div>
 </body>
 </html>

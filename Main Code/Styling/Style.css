@@ -1265,16 +1265,17 @@ body{
 
 .popup-form {
     font-family: sans-serif;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #d7e7f6;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    border: 1px solid #4c5d6d;
-    z-index: 1000;}
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
 .popup-form form{
     display:flex ;
