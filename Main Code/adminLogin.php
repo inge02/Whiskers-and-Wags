@@ -61,7 +61,7 @@ include('PHP/connect.php');
                             $row = mysqli_fetch_assoc($results);
 
                             if(password_verify($sanitized_pass,$row['password'])){
-                                echo "<script type='text/javascript'> window.location.href='adminGallery.html'</script>";
+                                echo "<script type='text/javascript'> window.location.href='AdminIndex.html'</script>";
                             } else{
                                 echo '<p style="color:red;font-size:20px; text-align:center;">Invalid Credentials</p>';
                             }

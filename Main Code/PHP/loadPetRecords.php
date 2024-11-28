@@ -59,6 +59,6 @@
 
             }
         } else{
-            echo "<h5>There are no pets that fit the criteria!</h5> <img style='width:150px; height:150px' src='GIFs/magnifying-glass.gif'>";
+            echo "<h5>There are no pets that fit the criteria!</h5> <img style='width:200px; height:200px' src='GIFs/magnifying-glass.gif'>";
         }
         ?>

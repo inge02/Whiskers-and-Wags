@@ -30,10 +30,11 @@ include('PHP/connect.php');
     <!--gets replaced with Navbar.html-->
     <div id="nav"></div>
 
-
+    <div class="">
     <!-- dropdowns -->
     <form method="post">
 
+    
         <div class="adopt_dropdowns evenly_distribute_children">
             <div>
                 <h5>Age</h5>
@@ -78,6 +79,7 @@ include('PHP/connect.php');
         <?php
             include("PHP/loadPetRecords.php");
         ?>
+    </div>
     </div>
 
     <!-- bootstrap modal -->
