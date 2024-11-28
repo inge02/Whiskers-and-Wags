@@ -271,6 +271,21 @@ nav ul a:hover{
     cursor: pointer;
 }
 
+@media(max-width:730px){
+    .evenly_distribute_children{
+        flex-direction: column;
+    }
+
+    .adopt_dropdowns div{
+        width: 100%;
+    }
+
+    .adopt_dropdowns select{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
 /* adoption images */
 .adopt_imgs{
     text-align: center;
