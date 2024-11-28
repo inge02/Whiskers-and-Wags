@@ -35,7 +35,7 @@
 
 <body>
     <div id="nav"></div>
-    <div class="slider-frame"  id="AboutUs">
+    <div class="slider-frame">
         <div class="slide-images">
             <div class="img-container">
                 <img src="Images/kennel.jpg">
@@ -49,7 +49,7 @@
         </div>
     </div>
     
-    <div class="AboutUs">
+    <div class="AboutUs"   id="AboutUs">
         <p class="heading">Welcome To</p>
         <img src="Images/whiskers_&_wags_transparent.png">
         <p>Whiskers and Wags is a small, passionate animal adoption business. 
