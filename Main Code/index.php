@@ -1,3 +1,26 @@
+<?php
+    include('Subscribe_data_con.php');
+    if (isset($_POST['submit'])) {
+        $user_name = $_POST['name'];
+        $user_surname = $_POST['surname'];
+        $emialAdress = $_POST['email'];
+    
+        
+        $query = mysqli_query($conn, "INSERT INTO newsub (sub_name,sub_surname,sub_email) VALUES ('$user_name','$user_surname','$emialAdress')");
+
+
+        if ($query) {
+            echo "<script>alert('You have been subscribed');</script>";
+        } else {
+            echo "<script>alert('Oops, something went wrong');</script>";
+        }
+
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,14 +181,14 @@
                 </ul>
             </div>
             <div class="form">
-                <form>
+                <form method="POST">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="surname">Surname:</label>
                     <input type="text" id="surname" name="surname" required>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-                    <input class="button" type="button" value="Submit">
+                    <input class="button" type="submit" name="submit" value="Submit">
                 </form>
             </div>
         </div>
