@@ -31,11 +31,7 @@ if(isset($_POST['add_img'])){
     } else{
         header("location:../adminGallery.php?message=FileMissing");
     }
-
-    
-
-
-    
+ 
 }
 
 ?>

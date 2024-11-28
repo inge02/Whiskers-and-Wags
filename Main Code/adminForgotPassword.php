@@ -93,8 +93,11 @@ include('PHP/connect.php');
                 ?>
 
                 <div><button id="next_btn" name="next" class="admin_btn">Next</button></div><br>
-                <div><button id="back_btn" class="admin_btn">Back</button></div>
             </form>
+
+            <div>
+                <button id="back_btn" class="admin_btn" onclick="window.location.href='adminLogin.php'">Back</button>
+            </div>
 
             <div class="admin_links">
                 <a href="">Help?</a>

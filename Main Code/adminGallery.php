@@ -21,14 +21,18 @@ include('PHP/connect.php');
 
     <div class="title_card">
         <h1>EDIT GALLERY</h1>
-        <p></p>
     </div>
 
     <div class="content">
+
         <div class='admin_add_form'>
+
             <h2>Add Gallery Image</h2>
+
             <div class='add_gallery_form'>
+
                 <form method='post' action='PHP/add_gallery.php' enctype="multipart/form-data">
+
                     <label for='file'>Upload File</label><br>
                     <input id='file' name='file' type='file' accept="image/*"><br>
 
@@ -36,7 +40,6 @@ include('PHP/connect.php');
                     <textarea id='desc' name='desc' maxlength="300"></textarea>
 
                     <?php
-                    
                         if (isset($_GET['message'])){
                             $msg = $_GET['message'];
                             if ($msg == 'FileMissing'){
@@ -47,24 +50,19 @@ include('PHP/connect.php');
                                 echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
                             }
                         }
-                    
                     ?>
 
                     <div style='text-align:center;'>
                         <button id='add_img' class='add_img_btn' name='add_img'>Add Image</button>
                     </div>
                     
-
                 </form>
             </div>
 
-
         </div>
 
-        
-
         <div class='admin-home-table'>
-        <h2>Edit Gallery</h2>
+
             <table>
                 <thead>
                     <tr>
@@ -98,16 +96,13 @@ include('PHP/connect.php');
                                     
                                 </tr>
                                 
-
                                 <?php
                             }
 
                         }
 
                         ?>
-
-                    
-                    
+ 
                 </tbody>
 
             </table>

@@ -1,9 +1,6 @@
 <?php
-
-include('PHP/connect.php');
-
+    include('PHP/connect.php');
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,6 @@ include('PHP/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Styling/Style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
-    <script src="JS/loadAdminHeaderFooter.js"></script>
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
     <title>Whiskers & Wags - Admin Login</title>
     
@@ -42,6 +38,7 @@ include('PHP/connect.php');
 
                 <label for="admin_password">Enter Password</label><br>
                 <input type="password" name="admin_password" id="admin_password" placeholder="Enter your password"><br>
+
                 <?php
 
                 if (isset($_POST['login'])){
@@ -72,29 +69,34 @@ include('PHP/connect.php');
                     }
                 }
 
-                if (isset($_POST['back'])){
-                    echo "<script type='text/javascript'> window.location.href='index.html'</script>";
-                }
-
             ?>
-            <br>
-                <div><button id="login_btn" name="login" class="admin_btn">Login</button></div>
-                <br>
-                <div><button id="login_back_btn" name="back" class="admin_btn">Back</button></div>
-            </form>
+
             <br>
 
-            
+                <div>
+                    <button id="login_btn" name="login" class="admin_btn">Login</button></div>
+                <br> 
+
+            </form>
+
+            <div>
+                <button id="login_back_btn" class="admin_btn" onclick="window.location.href='index.html'">Back</button>
+            </div>
+
+            <br>
 
             <div class="admin_links evenly_distribute_children">
                 <a href="adminForgotPassword.php">Forgot Password?</a>
                 <a href="">Help?</a>
             </div>
+            
         </div>
     </div>
 
     <!-- replaced with footer -->
     <div id="admin_footer"></div>
+
+    <script src="JS/loadAdminHeaderFooter.js"></script>
 
 </body>
 </html>

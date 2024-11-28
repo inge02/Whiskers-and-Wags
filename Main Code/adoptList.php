@@ -9,11 +9,13 @@ include('PHP/connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Title</title>
+    <title>Whiskers & Wags - Adoptable Pets</title>
 
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
 
     <link rel="stylesheet" href="Styling/Style.css">
+
+    <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
     
 
     <!-- links and scripts for bootstrap modal -->
@@ -34,8 +36,8 @@ include('PHP/connect.php');
     <!-- dropdowns -->
     <form method="post">
 
-    
         <div class="adopt_dropdowns evenly_distribute_children">
+
             <div>
                 <h5>Age</h5>
                 <select id="adopt_age" name="age">
@@ -64,12 +66,16 @@ include('PHP/connect.php');
                     <option value="Large">Large</option>
                 </select>
             </div>
+
         </div>
 
         <div style="text-align: center;">
+
             <button id="apply_filters_btn" name="apply" class="adopt_filter_btn">Apply Filters</button>
             <button id="clear_filters_btn" name="clear" class="adopt_filter_btn">Clear Filters</button>
+
         </div>
+
         <br>
 
     </form>
@@ -80,6 +86,7 @@ include('PHP/connect.php');
             include("PHP/loadPetRecords.php");
         ?>
     </div>
+    
     </div>
 
     <!-- bootstrap modal -->
