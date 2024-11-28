@@ -19,29 +19,48 @@ include('PHP/connect.php');
         <img src="Images/placeholder_image.png">
     </div>
     <div class="admin-add-form">
-        <form>
+        <form method="post" enctype="multipart/form-data" action='PHP/add_rescue.php'>
             <h1>Add a pet</h1>
             <label for="pet-pic">Upload Picture</label>
-            <input type="file" id="pet-pic">
+            <input type="file" id="pet-pic" name="pet-pic">
             <label for="pet-name">Enter Pet name</label>
-            <input type="text" id="pet-name">
+            <input type="text" id="pet-name" name="pet-name">
+            <label for="pet-name">Enter Pet breed</label>
+            <input type="text" id="pet-breed" name="pet-breed">
             <div class="form-together-content">
                 <label for="pet-type">Enter Pet Type</label>
-                <select id="pet-type">
-                    <option value="select">Select</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
+                <select id="pet-type" name="pet-type">
+                    <option value="" disabled selected hidden>Select</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
                     <option value="Small-pet">Small Pet</option>
                 </select>
                 <label for="pet-gender">Gender</label>
-                <select id="pet-gender">
-                    <option value="select">Select</option>
+                <select id="pet-gender" name="pet-gender">
+                    <option value="" disabled selected hidden>Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
             </div>
+            <div class="form-together-content">
+                <label for="pet-age">Enter Pet Age</label>
+                <select id="pet-age" name="pet-age">
+                    <option value="" disabled selected hidden>Select</option>
+                    <option value="Juvenile">Juvenile</option>
+                    <option value="Adult">Adult</option>
+                    <option value="Senior">Senior</option>
+                </select>
+
+                <label for="pet-size">Enter Pet Size</label>
+                <select id="pet-size" name="pet-size">
+                    <option value="" disabled selected hidden>Select</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
             <label for="pet-discription">Discription</label>
-            <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+            <textarea rows="4" cols="50" name="desc" id="desc" maxlength="300"></textarea>
 
             <?php
                     
@@ -54,12 +73,16 @@ include('PHP/connect.php');
                             } elseif ($msg == 'DeleteSuccess'){
                                 echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
                             }
+                            elseif ($msg == 'InfoMissing'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to fill in all fields!</p>';
+                            }
                         }
                     
                     ?>
 
             <div class="admin-home-buttons">
-                <input class="add" type="button" value="Add Animal">
+                <button class="add" name="add_pet">Add Animal</button>
+                <!-- <input class="add" type="button" value="Add Animal" name="add_pet"> -->
             </div>
         </form>
     </div>
