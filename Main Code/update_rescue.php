@@ -42,7 +42,6 @@ if(isset($_GET['pet_id'])){
 
     <div class="title_card">
         <h1>UPDATE RESCUE DETAILS</h1>
-        <p></p>
     </div>
 
     <br>

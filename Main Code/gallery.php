@@ -1,7 +1,5 @@
 <?php
-
-include('PHP/connect.php');
-
+    include('PHP/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +10,6 @@ include('PHP/connect.php');
     <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
     <link href="Styling/Style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
-    <script src="JS/loadHeaderFooter.js"></script>
     <title>Whiskers & Wags - Gallery</title>
 </head>
 <body>
@@ -58,6 +55,8 @@ include('PHP/connect.php');
     </div>
 
     <div id="footer"></div>
+
+    <script src="JS/loadHeaderFooter.js"></script>
 
     <script>
         const modal = document.getElementById('gallery_modal');
