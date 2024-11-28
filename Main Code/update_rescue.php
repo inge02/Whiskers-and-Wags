@@ -24,7 +24,6 @@ if(isset($_GET['pet_id'])){
     }
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +31,9 @@ if(isset($_GET['pet_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Whiskers & Wags - Admin Update Rescue</title>
     <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
     <link href="Styling/Style.css" rel="stylesheet">
-    <script src="JS/loadAdminHeaderFooter.js"></script>
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
 </head>
 <body>
@@ -44,7 +42,6 @@ if(isset($_GET['pet_id'])){
 
     <div class="title_card">
         <h1>UPDATE RESCUE DETAILS</h1>
-        <p></p>
     </div>
 
     <br>
@@ -52,15 +49,21 @@ if(isset($_GET['pet_id'])){
     <div class="admin-add-form">
         <form method="post" enctype="multipart/form-data">
             <h1>Add a pet</h1>
+
             <label>Current Image</label>
             <img src="<?php echo $old_file_path?>">
+
             <label for="pet-pic">Upload Picture</label>
             <input type="file" id="pet-pic" name="pet-pic">
+
             <label for="pet-name">Enter Pet name</label>
             <input type="text" id="pet-name" name="pet-name" value="<?php echo $row['name']?>">
+
             <label for="pet-name">Enter Pet breed</label>
             <input type="text" id="pet-breed" name="pet-breed" value="<?php echo $row['breed']?>">
+
             <div class="form-together-content">
+
                 <label for="pet-type">Enter Pet Type</label>
                 <select id="pet-type" name="pet-type">
                     <option value="<?php echo $row['category']?>"  selected hidden><?php echo $row['category']?></option>
@@ -68,14 +71,18 @@ if(isset($_GET['pet_id'])){
                     <option value="Cat">Cat</option>
                     <option value="Small-pet">Small Pet</option>
                 </select>
+
                 <label for="pet-gender">Gender</label>
                 <select id="pet-gender" name="pet-gender">
                     <option value="<?php echo $row['gender']?>"  selected hidden><?php echo $row['gender']?></option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
+
             </div>
+
             <div class="form-together-content">
+
                 <label for="pet-age">Enter Pet Age</label>
                 <select id="pet-age" name="pet-age">
                     <option value="<?php echo $row['age']?>"  selected hidden><?php echo $row['age']?></option>
@@ -91,31 +98,16 @@ if(isset($_GET['pet_id'])){
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
+
             </div>
+
             <label for="pet-discription">Description</label>
             <textarea rows="4" cols="50" name="desc" id="desc" maxlength="300"><?php echo $row['description']?></textarea>
 
-            <?php
-                    
-                        // if (isset($_GET['message'])){
-                        //     $msg = $_GET['message'];
-                        //     if ($msg == 'FileMissing'){
-                        //         echo '<p style="color:red;font-size:20px; text-align:center;">You need to upload a file</p>';
-                        //     } elseif ($msg == 'Success'){
-                        //         echo '<p style="color:green;font-size:20px; text-align:center;">Upload Successful!</p>';
-                        //     } elseif ($msg == 'DeleteSuccess'){
-                        //         echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
-                        //     }elseif ($msg == 'InfoMissing'){
-                        //         echo '<p style="color:red;font-size:20px; text-align:center;">You need to fill in all fields!</p>';
-                        //     }
-                        // }
-                    
-                    ?>
-
             <div class="admin-home-buttons">
                 <button class="add" name="update_pet">Update Animal</button>
-                <!-- <input class="add" type="button" value="Add Animal" name="add_pet"> -->
             </div>
+
         </form>
     </div>
 
@@ -166,6 +158,7 @@ if(isset($_GET['pet_id'])){
                     header("location:AdminPet.php?message=UpdateFail");
                 }
             }
+
         } elseif($file_size == 0){
             $query = "UPDATE rescues SET name ='".$name."', age='".$age."', breed='".$breed."', size='".$size."', gender='".$gender."', description='".$desc."', category='".$type."' WHERE rescue_id='".$id."'";
     
@@ -175,13 +168,13 @@ if(isset($_GET['pet_id'])){
                 header("location:AdminPet.php?message=UpdateSuccess");
             } else{
                 header("location:AdminPet.php?message=UpdateFail");
-            }
-                    
-                }
-            }
+            }     
+        }
+    }
     
     ?>
 
+<script src="JS/loadAdminHeaderFooter.js"></script>
 
 </body>
 </html>

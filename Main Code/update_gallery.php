@@ -18,7 +18,6 @@ if(isset($_GET['img_id'])){
     }
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +25,9 @@ if(isset($_GET['img_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Whiskers & Wags - Admin Update Gallery</title>
     <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
     <link href="Styling/Style.css" rel="stylesheet">
-    <script src="JS/loadAdminHeaderFooter.js"></script>
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
 </head>
 <body>
@@ -38,17 +36,21 @@ if(isset($_GET['img_id'])){
 
     <div class="title_card">
         <h1>UPDATE GALLERY IMAGE</h1>
-        <p></p>
     </div>
 
     <div class='content'>
-    <div class='admin_add_form'>
+
+        <div class='admin_add_form'>
+
             <h2>Change Gallery Image Information</h2>
+
             <div class='add_gallery_form'>
+
                 <form method='post' enctype="multipart/form-data">
+
                     <label>Current Image</label>
                     <img src='<?php echo $old_file_path?>'> <br>
-                
+                    
                     <label for='file'>Change Image</label><br>
                     <input id='file' name='file' type='file' accept="image/*"><br>
 
@@ -58,20 +60,20 @@ if(isset($_GET['img_id'])){
                     <div style='text-align:center;'>
                         <button class='add_img_btn' name='update_img'>Update Image</button>
                     </div>
-                    
-
+                        
                 </form>
+
             </div>
 
-
-
         </div>
-        <br>
 
+        <br>
 
     </div>
 
     <div id="admin_footer"></div>
+
+    <script src="JS/loadAdminHeaderFooter.js"></script>
 
     <?php
     
