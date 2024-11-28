@@ -1,3 +1,9 @@
+<?php
+
+include('PHP/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,22 +42,78 @@
             </div>
             <label for="pet-discription">Discription</label>
             <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+
+            <?php
+                    
+                        if (isset($_GET['message'])){
+                            $msg = $_GET['message'];
+                            if ($msg == 'FileMissing'){
+                                echo '<p style="color:red;font-size:20px; text-align:center;">You need to upload a file</p>';
+                            } elseif ($msg == 'Success'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Upload Successful!</p>';
+                            } elseif ($msg == 'DeleteSuccess'){
+                                echo '<p style="color:green;font-size:20px; text-align:center;">Delete Successful!</p>';
+                            }
+                        }
+                    
+                    ?>
+
             <div class="admin-home-buttons">
                 <input class="add" type="button" value="Add Animal">
             </div>
         </form>
     </div>
+
+
+
     <div class="admin-home-table">
         <table>
+            <thead>
             <tr>
                 <th>Picture</th>
                 <th>Name</th>
-                <th>Type</th>
+                <th>Age</th>
                 <th>Gender</th>
-                <th>Discription</th>
-                <th>Action</th>
+                <th>Breed</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
-            <tr>
+            </thead>
+
+            <tbody>
+            <?php
+                        $query = "SELECT * FROM rescues";
+
+                        $result = mysqli_query($conn,$query);
+
+                        if (!$result){
+                            die('Query Failed');
+                        } else{
+                            while($row = mysqli_fetch_assoc($result)){
+                                $id = $row['rescue_id'];
+                                $img_url = 'Images/Rescues/'.$row['file_name'];
+                                ?>
+                                <tr>
+                                    <td><?php echo "<img class='gal_admin_img' id='$id' src='$img_url'>"?></td>
+                                    <td><?php echo $row['name']?></td>
+                                    <td><?php echo $row['age']?></td>
+                                    <td><?php echo $row['gender']?></td>
+                                    <td><?php echo $row['breed']?></td>
+                                    <td><a class="btn bg-warning text-white" href="update_rescue.php?img_id=<?php echo $id?>">Edit</a></td>
+                                    <td><a class="btn bg-danger text-white" href="PHP/delete_rescue.php?img_id=<?php echo $id?>">Delete</a></td>
+                                    
+                                </tr>
+                                
+
+                                <?php
+                            }
+
+                        }
+
+                        ?>
+            </tbody>
+
+            <!-- <tr>
                 <td><img src="Images/placeholder_image.png"></td>
                 <td>Roxy</td>
                 <td>Dog</td>
@@ -89,7 +151,7 @@
                     <input class="update" type="button" value="Update Details">
                     <input class="remove" type="button" value="Remove Animal">
                 </td>
-            </tr>
+            </tr> -->
         </table>
     </div>
 

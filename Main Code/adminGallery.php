@@ -63,9 +63,9 @@ include('PHP/connect.php');
 
         
 
-        <div class='admin_table'>
+        <div class='admin-home-table'>
         <h2>Edit Gallery</h2>
-            <table class="table table-hover table-bordered table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Image</th>
