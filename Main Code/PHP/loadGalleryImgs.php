@@ -16,6 +16,8 @@ if(mysqli_num_rows($results)> 0){
 
         echo "<img class='gal_img' src='$img_url' id='$id' data-desc='$desc'>";
     }
+} else {
+    echo "<br><h5>There are no images currently!</h5> <img style='width:150px; height:150px' src='GIFs/magnifying-glass.gif'>";
 }
 
 ?>
