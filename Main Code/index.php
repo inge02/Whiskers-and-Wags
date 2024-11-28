@@ -38,13 +38,16 @@
     <div class="slider-frame">
         <div class="slide-images">
             <div class="img-container">
-                <img src="Images/kennel.jpg">
+                <img src="Images/lab-slidshow.jpg">
             </div>
             <div class="img-container">
-                <img src="Images/cattery.jpg">
+                <img src="Images/kitten-slideshow.jpg">
             </div>
             <div class="img-container">
-                <img src="Images/placeholder_image.png">
+                <img src="Images/bunny-slideshow.jpg">
+            </div>
+            <div class="img-container">
+                <img src="Images/catdog-slideshow.jpg">
             </div>
         </div>
     </div>
