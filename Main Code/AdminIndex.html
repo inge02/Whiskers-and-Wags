@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24a3ca1df6.js" crossorigin="anonymous"></script>
     <link href="Styling/Style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
-    <title>Home Page</title>
+    <title>Whiskers & Wags - Admin Home Page</title>
 </head>
-<body class="Home-page">
-    <div class="admin-home-img">
-        <img src="/Main Code/Images/placeholder_image.png">
-    </div>
-    <div class="wellcome-msg">
-        <h1>Wellcome</h1>
-        <h2>Username</h2>
-    </div>
-    <div class="admin-catagories">
-        <h1>What do you want to do?</h1>
-        <div class="admin-evenly_distribute_children">
-            
-            <div id="card_care" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_care').src='GIFs/care.gif'" onmouseleave="document.getElementById('anim_care').src='Images/care_frame.png'">
-                <img id="anim_care" src="Images/care_frame.png">
-                <h4>Edit Gallery</h4>
-            </div>
+<body>
+    <div id="admin_nav"></div>
+    <div class="Home-page">
 
-            <div id="card_dog" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_dog').src='GIFs/dog.gif'" onmouseleave="document.getElementById('anim_dog').src='Images/dog_frame.png'">
-                <img id="anim_dog" src="Images/dog_frame.png">
-                <h4>Edit Pets</h4>
-            </div>
+        <div class="hero_img" style="background-image: url('Images/admin_index_hero_img.jpg') ;"></div>
 
-            <div id="card_travel" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_travel').src='GIFs/travel.gif'" onmouseleave="document.getElementById('anim_travel').src='Images/travel_frame.png'">
-                <img id="anim_travel" src="Images/travel_frame.png">
-                <h4>Edit Events</h4>
+        <div class="title_card">
+            <h1>Welcome!</h1>
+        </div>
+
+        <div class="admin-catagories">
+            <h1>What do you want to do?</h1>
+
+            <div class="admin-evenly_distribute_children">
+                
+                <div id="card_care" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_care').src='GIFs/care.gif'" 
+                    onmouseleave="document.getElementById('anim_care').src='Images/care_frame.png'"
+                    onclick="location.href='adminGallery.php'">
+
+                    <img id="anim_care" src="Images/care_frame.png">
+                    <h4>Edit Gallery</h4>
+                </div>
+    
+                <div id="card_dog" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_dog').src='GIFs/dog.gif'" 
+                    onmouseleave="document.getElementById('anim_dog').src='Images/dog_frame.png'"
+                    onclick="location.href='AdminPet.php'">
+
+                    <img id="anim_dog" src="Images/dog_frame.png">
+                    <h4>Edit Pets</h4>
+                </div>
+    
+                <div id="card_travel" class="admin-icon_sqaure" onmouseover="document.getElementById('anim_travel').src='GIFs/travel.gif'" 
+                    onmouseleave="document.getElementById('anim_travel').src='Images/travel_frame.png'"
+                    onclick="location.href='AdminEvent.html'">
+
+                    <img id="anim_travel" src="Images/travel_frame.png">
+                    <h4>Edit Events</h4>
+                </div>
+
             </div>
         </div>
     </div>
+    
+    <div id="admin_footer"></div>
+    <script src="JS/loadAdminHeaderFooter.js"></script>
 </body>
 </html>

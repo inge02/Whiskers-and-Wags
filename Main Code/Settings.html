@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Styling/Style.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Icons/icon.ico">
+    <title>Whiskers & Wags - Admin Settings</title>
+   
+    <script src="https://kit.fontawesome.com/a3bd937370.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="admin_nav"></div>
     <div class="toggle">
        <input type="checkbox" id="check">
        <label for="check" class="toggle-button"></label>
     </div>
 
     <div class="Button-list">
-        <button type="button">Profile</button>
-        <button type="button">Update Password</button>
-        <button type="button">Logout</button>
+        <button type="button" >Profile</button>
+        <button onclick="location.href='adminForgotPassword.html'"  >Update Password</button>
+        <button onclick="location.href='adminLogin.html'" >Logout</button>
     </div>
     <div class="help-link">
         <a href="#">HELP</a>
     </div>
-    
+    <br>
+
+    <div id="admin_footer"></div>
+    <script src="JS/loadAdminHeaderFooter.js"></script>
 </body>
 </html>

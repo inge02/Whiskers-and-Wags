@@ -1,6 +1,7 @@
 /* NAV BAR */
 #nav, #admin_nav{
-    position: sticky; top: 0
+    position: sticky; top: 0;
+    z-index:1;
 }
 
 nav .nav_logo {
@@ -67,7 +68,7 @@ nav ul a:hover{
     display: none;
 }
 
-@media(max-width: 719px){
+@media(max-width: 770px){
     .checkbtn{
         display: block;
     }
@@ -105,7 +106,8 @@ nav ul a:hover{
     
     width: 100%;
     height: 600px;
-    margin-bottom: 0px;  
+    margin-bottom: 0px; 
+    transition: ease 1s;
 }
 
 /* use for description of page */
@@ -197,6 +199,15 @@ nav ul a:hover{
     transition: ease 1s;   
 }
 
+#info_frame{
+    width: 100%;
+    height: 600px;
+}
+
+.modal_container{
+    width: 100%;
+}
+
 @media(max-width: 1020px){
     .icon_sqaure{
         width: 200px;
@@ -257,21 +268,52 @@ nav ul a:hover{
 
 .adopt_dropdowns select{
     width: 80%;
+    cursor: pointer;
+}
+
+@media(max-width:730px){
+    .evenly_distribute_children{
+        flex-direction: column;
+    }
+
+    .adopt_dropdowns div{
+        width: 100%;
+    }
+
+    .adopt_dropdowns select{
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 /* adoption images */
 .adopt_imgs{
     text-align: center;
 }
-.adopt_imgs div{
+.adopt_imgs img{
     width: 250px;
     height: 250px;
     margin: 20px;
     display: inline-block;
-    background-image: url("../Images/placeholder_image.png");
+    object-fit: cover;
+    /* background-image: url("../Images/placeholder_image.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+}
+
+.gallery_imgs{
+    text-align: center;
+}
+.gallery_imgs img{
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    display: inline-block;
+    object-fit: cover;}
+
+.pet_pf{
+    cursor: pointer;
 }
 
 
@@ -279,7 +321,8 @@ nav ul a:hover{
 
 .Logo{
     width: 250px;
-    height: 130px;
+    /* height: 130px; */
+    object-fit: cover;
     border-bottom: 2px solid;
     margin-bottom: 8px;
 }
@@ -293,6 +336,18 @@ nav ul a:hover{
 .container{
     max-width: 1170px;
     margin: auto;
+}
+
+@media(max-width: 770px){
+    #admin_footer .Footer{
+        height: 300px;
+    }
+}
+
+.social-links, .footer-map{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .row{
@@ -324,11 +379,6 @@ ul{
 
 /* --------------Event Page------------- */
 
-.event-cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 .footer-col p{
@@ -389,6 +439,9 @@ ul{
 @media(max-width: 574px){
     .footer-col{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 /* -----------------Settings--------------- */
@@ -404,6 +457,7 @@ ul{
     background-color: white;
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .toggle-button{
@@ -414,6 +468,7 @@ ul{
  cursor: pointer;
  position: relative;
  transition: 0.2s;
+ margin-top: 5px;
 }
 
 .toggle-button::before{
@@ -462,35 +517,63 @@ ul{
 }
 
 .help-link{
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     font-family: sans-serif;
     font-size: medium;
     font-weight: 700;
 }
-.event-details{
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    width: 1200px;
-    background: #d7e7f6;
-    font-family: sans-serif;
 
+.event-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.event-text h2{
-    color: #4c5d6d;
+.event-cards table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.event-cards table tr td img{
+    height: 400px;
+    width: 300px;
+    object-fit: fill;
+}
+
+.event-cards table tr{
+    border: 30px solid white;
+}
+
+.event-cards table .Table-text{
+    height: 400px;
+    width: 600px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:#d7e7f6;
+}
+
+.event-cards table .Table-text p{
+    text-align: left;
     font-weight: bold;
 }
 
-.event-image img{
-    width: 500px;
-    height: 100%;
-    margin-right: 50px;
+.event-cards table .Table-text h2{
+    font-size: 36px;
+    color: #4c5d6d;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
-.event-text button{
+.event-cards table .Table-text button {
     background: #4c5d6d;
     color: #d7e7f6;
     font-weight: bold;
@@ -498,7 +581,25 @@ ul{
     border-radius: 3px;
     height: 30px;
     width: 76px;
+    margin-bottom: 10px;
     cursor: pointer;
+}
+
+.event-cards table .Table-text button:hover {
+    background: #afceee;
+    color: #4c5d6d;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .toggle{
+        margin-right: 30px;
+    }
+
+    .event-cards table tbody{
+        overflow-x: scroll;
+    }
 }
 
 
@@ -556,6 +657,7 @@ body{
     position: relative;
     width: 250px;
     height: 320px;
+    z-index: 0;
 }
 
 
@@ -584,16 +686,19 @@ body{
 @media only screen and (max-width: 600px) {
     .event-details{
         flex-direction: column;
-        width: 400px;
+        width: 300px;
     }
 
     .event-image img{
-        width: 400px;
+        width: 300px;
     }
 
     .event-text{
         margin-left: 25px;
         margin-right: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        gap: 5px;
     }
 }
 
@@ -670,9 +775,94 @@ body{
     background-color: #a6ecde;
 }
 
+#login_back_btn{
+    background-color: rgba(85, 95, 235, 0.884);
+}
+
+#login_back_btn:hover{
+    background-color: rgba(134, 169, 235, 0.884);
+}
+
 .admin_form div{
     text-align: center;
 }
+
+/* Admin Gallery */
+.gal_admin_img{
+    width: 200px;
+    height: 200px;;
+    object-fit: cover;
+    transition: ease 1s;
+}
+
+.gal_img{
+    transition: ease 1s;
+}
+
+@media(max-width:460px){
+    .gallery_imgs .gal_img{
+        width: 170px;
+        height: 170px;
+    }
+}
+
+.admin_table{
+    margin: 20px;
+}
+
+.admin_table h2{
+    margin-top: 10px;
+}
+
+.admin_add_form{
+    margin-top: 10px;
+    
+}
+
+.add_gallery_form{
+    width: 500px;
+    margin: auto;
+    background-color: #d7e7f6;
+    padding: 30px;
+    text-align: left;
+    transition: ease 1s;
+}
+
+.add_gallery_form label{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.add_gallery_form input[type=file]{
+    margin-bottom: 20px;
+}
+
+.add_gallery_form textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.add_gallery_form img{
+    width: 100%;
+}
+
+@media(max-width:555px){
+    .add_gallery_form{
+        width: 300px;
+    }
+}
+
+.add_img_btn{
+    padding: 10px;
+    background-color: #4bcab1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+
 .thefront img{
     height: 180px;
     width: 100%;
@@ -758,9 +948,10 @@ body{
 
 .slider-frame {
     overflow: hidden;
-    height: 450px;
+    height: 600px;
     width: 100%;
     position: relative;
+    object-fit: cover;
 }
 
 .slide-images {
@@ -778,7 +969,6 @@ body{
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
 }
 
 
@@ -801,6 +991,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: -1;
     }
 
     .subscribe-layout{
@@ -919,13 +1110,11 @@ body{
     align-items: center;
 }
 
-.accordion .content .form-content form .button{
+.accordion .content .form-content form .button button{
     margin-top: 20px;
-    justify-content: center;
-    display: flex;
 }
 
-.accordion .content .form-content form .button input[type="button"]{
+.accordion .content .form-content form .button button{
     width: 150px;
     height: 35px;
     cursor: pointer;
@@ -936,7 +1125,7 @@ body{
     font-size: medium;
 }
 
-.accordion .content .form-content form .button input[type="button"]:hover{
+.accordion .content .form-content form .button button:hover{
     background: #a6ecde;
 }
 
@@ -1070,6 +1259,7 @@ body{
     text-align: center;
     padding: 0 20px;
     border-radius: 30px;
+    transition: ease 1s;
 }
 
 .icon_sqaure_link{
@@ -1093,6 +1283,7 @@ body{
 
 .admin-icon_sqaure img{
     width: 150px;
+    transition: ease 1s;
 }
 
 .admin-evenly_distribute_children{
@@ -1101,7 +1292,23 @@ body{
     justify-content: center;
 }
 
-@media(max-width: 400px){
+@media(max-width:740px){
+    .admin-icon_sqaure{
+        width: 160px;
+        height: 160px; 
+    }
+
+    .admin-icon_sqaure img{
+        width: 100px;   
+    }
+}
+
+@media(max-width: 535px){
+
+    .admin-icon_sqaure{
+        margin: auto; 
+        margin-bottom: 20px;
+    }
 
     .admin-home-img{
         height: 200px;
@@ -1123,48 +1330,253 @@ body{
     height:400px;
     height: 400px;
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .admin-home-buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 100px 150px 100px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .admin-home-buttons input{
-    width: 160px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    font-size: large;
+    font-size: medium;
 }
 
-.admin-home-buttons .add{
+.admin-add-form{
+    display: flex;
+    justify-content: center;
+}
+
+.admin-add-form form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    background: #d7e7f6;
+    width: 600px;
+    padding: 30px;
+    font-family: sans-serif;
+    transition: ease 1s;
+}
+
+.admin-add-form form label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.admin-add-form form input[type="text"]{
+    width: 300px;
+    height: 30px;
+    transition: ease 1s;
+}
+
+.admin-add-form form select{
+    width: 100px;
+    height: 30px;
+}
+
+
+.admin-add-form form .event-cost-time,.event-dates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+@media(max-width: 680px){
+    .admin-add-form form{
+        width: 400px;
+    }
+}
+
+@media(max-width: 460px){
+    .admin-add-form form{
+        width: 300px;
+    }
+    .admin-add-form form input[type="text"] {
+        width: 200px;
+    }
+
+    .admin-add-form form .form-together-content {
+        flex-direction: column;
+    }
+
+}
+
+
+.popup-form form .update-event-cost-time,.update-evet-dates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    gap: 10px;
+}
+
+
+
+.popup-form {
+    font-family: sans-serif;
+    background-color: #d7e7f6;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.popup-form form{
+    display:flex ;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.popup-form form h1{
+    color: #4c5d6d;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.popup-form form label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.popup-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 30px;
+}
+body.popup-active {
+    overflow: hidden;
+} 
+
+
+.popup-form form input[type="text"]{
+    width: 200px;
+    height: 30px;
+}
+
+.popup-form form select{
+    width: 100px;
+    height: 30px;
+}
+
+
+.popup-buttons .save-updates{
     background:#4bcab1;
     color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    width: fit-content;
+    text-align: center;
 }
 
-.admin-home-buttons .remove{
+.popup-buttons .cancel-updates{
+    background:#EA8F8F;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    width: fit-content;
+    text-align: center;
+}
+
+
+.popup-buttons .save-updates:hover{
+    background:#a6ecde;
+}
+
+.popup-buttons .cancel-updates:hover{
+    background:#E6ADAD;
+}
+
+
+
+
+
+
+
+
+.form-together-content{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.form-together-content label{
+    margin-right: 6px;
+}
+
+.form-together-content select{
+    margin-right: 40px;
+}
+
+.admin-add-form form h1{
+    text-align: center;
+    text-decoration: underline;
+    color: #4c5d6d;
+}
+
+.admin-home-buttons button{
+    background:#4bcab1;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.admin-home-table table tr td form button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+.admin-home-table table tr td .remove{
     background:#EA8F8F;
     color: white;
 }
 
-.admin-home-buttons .update{
+.admin-home-table table tr td form button{
     background:#f4da7a;
     color: white;
+    margin-bottom: 20px;
 }
 
-.admin-home-buttons .add:hover{
+.admin-home-buttons button:hover{
     background:#a6ecde;
 }
 
-.admin-home-buttons .remove:hover{
+.admin-home-table table tr td .remove:hover{
     background:#E6ADAD;
 }
 
-.admin-home-buttons .update:hover{
+.admin-home-table table tr td .update:hover{
     background:#f4e3a5;
 }
 
@@ -1175,6 +1587,7 @@ body{
 
 .admin-home-table{
     padding: 70px;
+    transition: ease 1s;
 }
 
 .admin-home-table table{
@@ -1195,6 +1608,12 @@ body{
     padding: 20px;
 }
 
+@media(max-width:980px){
+    .admin-home-table{
+        overflow-x: scroll;
+    }
+}
+
 @media only screen and (max-width: 400px) {
     .admin-home-buttons{
         display: flex;
@@ -1213,7 +1632,31 @@ body{
 
     .admin-home-table{
         padding: 30px;
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
     }
-}
 
+    .popup-form{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .popup-buttons{
+        gap: 10px;
+        justify-content: none;
+    }
+
+    .form-together-content{
+        flex-direction: column;
+    }
+
+    .popup-buttons .save-updates {
+        margin-right: 10px;
+
+    }
+
+    .popup-form form textarea{
+        width: 250px;
+    }
+    
+}
