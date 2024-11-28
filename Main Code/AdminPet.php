@@ -98,7 +98,7 @@ include('PHP/connect.php');
 
             </div>
 
-            <label for="pet-discription">Discription</label>
+            <label for="pet-discription">Description</label>
             <textarea rows="4" cols="50" name="desc" id="desc" maxlength="300"></textarea>
 
             <div class="admin-home-buttons">

@@ -21,7 +21,6 @@ include('PHP/connect.php');
 
     <div class="title_card">
         <h1>EDIT GALLERY</h1>
-        <p></p>
     </div>
 
     <div class="content">
@@ -63,8 +62,6 @@ include('PHP/connect.php');
         </div>
 
         <div class='admin-home-table'>
-
-        <h2>Edit Gallery</h2>
 
             <table>
                 <thead>
