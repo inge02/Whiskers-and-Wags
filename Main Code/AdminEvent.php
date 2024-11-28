@@ -32,74 +32,6 @@
         }
     }
 
-
-
-
-
-
-    // if (isset($_POST['update'])){
-    //     $event_img = $_FILES['img_file'];
-    //     $name = $_POST['event_name'];
-    //     $start_date = $_POST['startDate'];
-    //     $end_date = $_POST['end_date'];
-    //     $venue = $_POST['venue'];
-    //     $time = $_POST['event_time'];
-    //     $cost = $_POST['event_cost'];
-    //     $discription = $_POST['event_description'];
-
-    //     $query = mysqli_query($conn,"UPDATE admin_event SET img_file='$event_img', event_name='$name,
-    //                          startDate='$start_date', end_date='$end_date', venue='$venue',
-    //                          event_time='$time', event_cost='$cost', event_discription='$discription' ,WHERE event_id=?");
-
-    //     if ($query) {
-    //         $file_destination = 'Images/Events/'.$new_file_name;
-    //         move_uploaded_file($file_temp, $file_destination);
-    //         echo "<script>alert('Event updated successfully');</script>";
-    //     } else {
-    //         echo "<script>alert('Oops, something went wrong');</script>";
-    //     }
-        
-    // }
-
-    // if (isset($_POST['update'])) {
-    //     $event_id = $_POST['event_id']; // Get the event_id
-    //     $event_name = $_POST['event_name'];
-    //     $start_date = $_POST['startDate'];
-    //     $end_date = $_POST['end_date'];
-    //     $venue = $_POST['venue'];
-    //     $time = $_POST['event_time'];
-    //     $cost = $_POST['event_cost'];
-    //     $description = $_POST['event_description'];
-    
-    //     // Handle file upload
-    //     $event_img = $_FILES['img_file'];
-    //     if ($event_img['error'] == 0) {
-    //         $file_name = $event_img['name'];
-    //         $file_temp = $event_img['tmp_name'];
-    //         $file_ext = explode('.', $file_name);
-    //         $file_actual_ext = strtolower(end($file_ext));
-    
-    //         // create unique img name
-    //         $new_file_name = uniqid('',true).".".$file_actual_ext;
-    
-    //         // Move file to destination
-    //         $file_destination = 'Images/Events/'.$new_file_name;
-    //         move_uploaded_file($file_temp, $file_destination);
-    //     } else {
-    //         // If no new image, keep the old one (optional)
-    //         $new_file_name = $old_file_name; // You should load the current file name from the database if needed
-    //     }
-    
-    //     $query = mysqli_query($conn, "UPDATE admin_event SET event_pic='$new_file_name', event_name='$event_name', startDate='$start_date', end_date='$end_date', venue='$venue', event_time='$time', event_cost='$cost', event_discription='$description' WHERE event_id='$event_id'");
-    
-    //     if ($query) {
-    //         echo "<script>alert('Event updated successfully');</script>";
-    //     } else {
-    //         echo "<script>alert('Oops, something went wrong');</script>";
-    //     }
-    // }
-    
-
 ?>
 
 
@@ -116,9 +48,6 @@
 </head>
 <body>
     <div id="admin_nav"></div>
-    <div class="admin-home-image">
-        <img src="Images/placeholder_image.png" alt="Admin Header Image">
-    </div>
     <div class="admin-add-form">
         <form method="post" enctype="multipart/form-data">
             <h1>Add an Event</h1>

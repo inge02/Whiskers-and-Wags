@@ -1202,6 +1202,7 @@ body{
 }
 
 .admin-add-form form{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1298,6 +1299,7 @@ body{
 .popup-buttons{
     display: flex;
     justify-content: space-between;
+    gap: 80px;
     margin-top: 30px;
 }
 body.popup-active {
@@ -1372,12 +1374,18 @@ body.popup-active {
     color: #4c5d6d;
 }
 
-.admin-home-buttons .add{
+.admin-home-buttons button{
     background:#4bcab1;
     color: white;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
 }
 
-.admin-home-table table tr td input{
+.admin-home-table table tr td form button{
     width: 140px;
     height: 40px;
     border: none;
@@ -1392,13 +1400,13 @@ body.popup-active {
     color: white;
 }
 
-.admin-home-table table tr td .update{
+.admin-home-table table tr td form button{
     background:#f4da7a;
     color: white;
     margin-bottom: 20px;
 }
 
-.admin-home-buttons .add:hover{
+.admin-home-buttons button:hover{
     background:#a6ecde;
 }
 
