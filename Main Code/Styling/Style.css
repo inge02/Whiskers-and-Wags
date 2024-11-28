@@ -67,7 +67,7 @@ nav ul a:hover{
     display: none;
 }
 
-@media(max-width: 719px){
+@media(max-width: 770px){
     .checkbtn{
         display: block;
     }
@@ -197,6 +197,15 @@ nav ul a:hover{
     transition: ease 1s;   
 }
 
+#info_frame{
+    width: 100%;
+    height: 600px;
+}
+
+.modal_container{
+    width: 100%;
+}
+
 @media(max-width: 1020px){
     .icon_sqaure{
         width: 200px;
@@ -257,6 +266,7 @@ nav ul a:hover{
 
 .adopt_dropdowns select{
     width: 80%;
+    cursor: pointer;
 }
 
 /* adoption images */
@@ -273,6 +283,20 @@ nav ul a:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
+}
+
+.gallery_imgs{
+    text-align: center;
+}
+.gallery_imgs img{
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    display: inline-block;
+    object-fit: cover;}
+
+.pet_pf{
+    cursor: pointer;
 }
 
 
@@ -723,6 +747,63 @@ body{
 .admin_form div{
     text-align: center;
 }
+
+/* Admin Gallery */
+.gal_admin_img{
+    width: 200px;
+    height: 200px;;
+    object-fit: cover;
+}
+
+.admin_table{
+    margin: 20px;
+}
+
+.admin_table h2{
+    margin-top: 10px;
+}
+
+.admin_add_form{
+    margin-top: 10px;
+}
+
+.add_gallery_form{
+    width: 500px;
+    margin: auto;
+    background-color: #d7e7f6;
+    padding: 30px;
+    text-align: left;
+}
+
+.add_gallery_form label{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.add_gallery_form input[type=file]{
+    margin-bottom: 20px;
+}
+
+.add_gallery_form textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.add_gallery_form img{
+    width: 100%;
+}
+
+.add_img_btn{
+    padding: 10px;
+    background-color: #4bcab1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+
 .thefront img{
     height: 180px;
     width: 100%;

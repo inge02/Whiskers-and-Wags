@@ -98,7 +98,7 @@ include('PHP/connect.php');
 
                 <hr>
 
-                <div class="modal-body">
+                <div class="modal-body" style="text-align:center;">
                     <h5>Age</h5>
                     <p id="modal_pet_age">a</p>
 
@@ -118,7 +118,7 @@ include('PHP/connect.php');
 
                 <hr>
 
-                <div class="modal-body">
+                <div class="modal-body" style="text-align:center;">
                     <h5>Adopt Me?</h5>
                     <p>Will you be my forever home? <br>
                     Please fill out <a href="">this form</a> to apply to adopt a pet and send it to our <a href="">email</a>!</p>
