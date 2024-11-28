@@ -44,11 +44,7 @@ if(isset($_POST['add_pet'])){
     } else{
         header("location:../AdminPet.php?message=FileMissing");
     }
-
-    
-
-
-    
+   
 }
 
 ?>

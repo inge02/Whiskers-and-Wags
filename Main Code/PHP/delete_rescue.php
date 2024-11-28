@@ -28,13 +28,7 @@ if ($_GET['pet_id']){
             header("location:../adminGallery.php?message=DeleteFail");
         }
 
-        // if($result){
-        //     header("location:../adminGallery.php?message=DeleteSuccess");
-        // }
     }
-
-
-    
 
 }
 
