@@ -906,9 +906,10 @@ body{
 
 .slider-frame {
     overflow: hidden;
-    height: 450px;
+    height: 600px;
     width: 100%;
     position: relative;
+    object-fit: cover;
 }
 
 .slide-images {
@@ -926,7 +927,6 @@ body{
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
 }
 
 
