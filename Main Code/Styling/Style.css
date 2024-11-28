@@ -357,12 +357,6 @@ ul{
 
 /* --------------Event Page------------- */
 
-.event-cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-}
 
 
 .footer-col p{
@@ -508,40 +502,56 @@ ul{
     font-size: medium;
     font-weight: 700;
 }
-.event-details{
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    width: 1200px;
-    background: #d7e7f6;
-    font-family: sans-serif;
 
-}
-
-.event-text{
-    padding: 20px 20px;
+.event-cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 20px;
 }
 
-.event-text p{
+.event-cards table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.event-cards table tr td img{
+    height: 400px;
+    width: 300px;
+    object-fit: fill;
+}
+
+.event-cards table tr{
+    border: 30px solid white;
+}
+
+.event-cards table .Table-text{
+    height: 400px;
+    width: 600px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:#d7e7f6;
+}
+
+.event-cards table .Table-text p{
     text-align: left;
-}
-
-.event-text h2{
-    color: #4c5d6d;
     font-weight: bold;
 }
 
-.event-image img{
-    width: 500px;
-    height: 100%;
-    margin-right: 50px;
+.event-cards table .Table-text h2{
+    font-size: 36px;
+    color: #4c5d6d;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
-.event-text button{
+.event-cards table .Table-text button {
     background: #4c5d6d;
     color: #d7e7f6;
     font-weight: bold;
@@ -553,15 +563,20 @@ ul{
     cursor: pointer;
 }
 
-.event-text button:hover{
+.event-cards table .Table-text button:hover {
     background: #afceee;
     color: #4c5d6d;
 }
 
 
+
 @media only screen and (max-width: 400px) {
     .toggle{
         margin-right: 30px;
+    }
+
+    .event-cards table tbody{
+        overflow-x: scroll;
     }
 }
 
@@ -1280,6 +1295,7 @@ body{
 }
 
 .admin-add-form form{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1342,16 +1358,17 @@ body{
 
 .popup-form {
     font-family: sans-serif;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #d7e7f6;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    border: 1px solid #4c5d6d;
-    z-index: 1000;}
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
 .popup-form form{
     display:flex ;
@@ -1376,6 +1393,7 @@ body{
 .popup-buttons{
     display: flex;
     justify-content: space-between;
+    gap: 80px;
     margin-top: 30px;
 }
 body.popup-active {
@@ -1450,12 +1468,18 @@ body.popup-active {
     color: #4c5d6d;
 }
 
-.admin-home-buttons .add{
+.admin-home-buttons button{
     background:#4bcab1;
     color: white;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
 }
 
-.admin-home-table table tr td input{
+.admin-home-table table tr td form button{
     width: 140px;
     height: 40px;
     border: none;
@@ -1470,13 +1494,13 @@ body.popup-active {
     color: white;
 }
 
-.admin-home-table table tr td .update{
+.admin-home-table table tr td form button{
     background:#f4da7a;
     color: white;
     margin-bottom: 20px;
 }
 
-.admin-home-buttons .add:hover{
+.admin-home-buttons button:hover{
     background:#a6ecde;
 }
 
