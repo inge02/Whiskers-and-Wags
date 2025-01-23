@@ -31,4 +31,4 @@ The application is currently live on Infinity Free, but the hosting is only vali
 
 Future Development:
 -----------------------
-Our main focus for this project was to implement the CRUD functions to ensure that changes made on the admin side are reflected on the client side. Future development will focus on implementing real payment and RSVP functionality, as well as improving the overall user ecperience.
+Our main focus for this project was to implement the CRUD functions to ensure that changes made on the admin side are reflected on the client side. Future development will focus on implementing real payment and RSVP functionality, as well as improving the overall user experience.
